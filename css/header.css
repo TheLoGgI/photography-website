@@ -39,8 +39,8 @@
 }
 
 .navigation__login {
-    font-weight: bold;
-    color: var(--clr-main);
+    /* font-weight: bold;
+    color: var(--clr-main); */
 }
 
 .selection {

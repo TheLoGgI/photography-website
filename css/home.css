@@ -1,0 +1,68 @@
+/* ------------------
+***********************
+        Hero Section
+***********************
+--------------------*/
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 90vh;
+}
+
+.hero__content {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    right: 0;
+    left: 0;
+}
+
+.hero__heading {
+    font-family: var(--fnt-heading);
+    font-size: 3.75rem;
+    max-width: 25ch;
+    font-weight: bold;
+    text-align: center;
+    margin: 15vh auto 0 auto;
+}
+
+.hero__paragraph {
+    max-width: clamp(20em, 45vw, 800px);
+    margin: 0 auto;
+    padding: 1em;
+    font-size: var(--fnt-size18);
+    text-align: center;
+}
+
+.hero__btn {
+    display: inline-block;
+    margin: 4rem 0 0 50%;
+    transform: translateX(-50%);
+    font-size: var(--fnt-size20);
+    padding: 1em 1.5em;
+    font-weight: bold;
+    background-color: var(--clr-main);
+    color: white;
+    text-decoration: none;
+}
+
+.hero__video {
+    width: 100%;
+    display: block;
+    z-index: 0;
+}
+
+.banner {
+    background-color: #F0F0F0;
+    /* height: 20rem; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem 2rem 5rem 2rem;
+}
+
+.banner__paragraf {
+    font-size: var(--fnt-size20);
+    text-align: center;
+    width: 25ch;
+}

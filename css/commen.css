@@ -1,0 +1,28 @@
+:root {
+    --ff-heading: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+    --clr-main: #4D4BFF;
+    --clr-secondry: #FFBEA9;
+    --clr-icon: #FA7A02;
+    --clr-link: #000;
+    --clr-bg: #F5F5F5;
+    --radius-size: 3px;
+    --fnt-size16: 1rem;
+    --fnt-size18: 1.125rem;
+    --fnt-size20: 1.25rem;
+    --fnt-size25: 1.5625rem;
+    --fnt-size35: 2.1875rem;
+    --fnt-size45: 2.8125rem;
+    font-size: 1rem; /* 18px as normal font-size */
+}
+
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: var(--ff-body);
+}

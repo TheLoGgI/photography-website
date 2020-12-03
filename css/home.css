@@ -71,3 +71,108 @@
     text-align: center;
     width: 25ch;
 }
+
+.flexbox-kurser {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 100px 0px 100px;
+
+}
+
+.kurser-overskrift {
+    margin: 100px 0px 30px 100px;
+}
+
+.kursus__img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.dots {
+    position: absolute;
+    z-index: -1;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.kursus__btn {
+    display: inline-block;
+    margin: 4rem 0 100px 50%;
+    transform: translateX(-50%);
+    font-size: var(--fnt-size20);
+    padding: 1em 1.5em;
+    font-weight: bold;
+    background-color: var(--clr-main);
+    color: white;
+    text-decoration: none;
+}
+
+.nyhedsbreve {
+    background-color: #68BAA6;
+}
+
+.flexbox-nyhedsbreve {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#nyhedsbreve-input {
+    height: 50px;
+    width: 300px;
+}
+
+.nyhedsbreve__btn {
+    padding: 13px 30px 13px 30px;
+    font-size: var(--fnt-size16);
+    background-color: var(--clr-main);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.kategorier-h1 {
+    text-align: center;
+    margin: 80px 0px 0px 0px;
+}
+
+.flexbox-kategorier {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    object-fit: cover;
+    margin: 50px 100px 100px 100px;
+}
+
+.kategori__img {
+    opacity: 1.0;
+    width: 300px;
+    height: 230px;
+    transition: .5s ease;
+}
+
+.kategori__img:hover{
+    opacity: 0.3;
+}
+
+.fotografen-h1 {
+    text-align: center;
+    margin: 80px 0px 0px 0px;
+}
+
+.flexbox-fotografen {
+    display: flex;
+    background-color: #F2F2F2;
+    margin: 50px;
+}
+
+.fotografen-text {
+    padding: 50px;
+}
+
+.selvportræt {
+    height: 500px;
+    width: 500px;
+}

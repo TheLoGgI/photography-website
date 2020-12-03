@@ -38,6 +38,7 @@
     color: var(--clr-main);
 }
 
+
 .navigation__login {
     /* font-weight: bold;
     color: var(--clr-main); */
@@ -53,6 +54,6 @@
     top: 70px;
     border-radius: 2px;
     user-select: none;
-    transform: translateX(500px);
+    transform: translateX(1200px);
 }
 

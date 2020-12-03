@@ -3,6 +3,7 @@
         Hero Section
 ***********************
 --------------------*/
+
 .hero {
     position: relative;
     width: 100%;
@@ -13,37 +14,40 @@
     position: absolute;
     z-index: 5;
     color: white;
-    right: 0;
     left: 0;
+    padding-left: 4rem;
 }
 
 .hero__heading {
     font-family: var(--fnt-heading);
-    font-size: 3.75rem;
+    font-size: 3rem;
     max-width: 25ch;
     font-weight: bold;
-    text-align: center;
-    margin: 15vh auto 0 auto;
+    margin: 20vh auto 0 auto;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.37);
 }
 
 .hero__paragraph {
     max-width: clamp(20em, 45vw, 800px);
-    margin: 0 auto;
-    padding: 1em;
+    margin-top: 2rem;
     font-size: var(--fnt-size18);
-    text-align: center;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.37);
 }
 
 .hero__btn {
     display: inline-block;
-    margin: 4rem 0 0 50%;
-    transform: translateX(-50%);
+    margin-top: 8rem;
     font-size: var(--fnt-size20);
     padding: 1em 1.5em;
     font-weight: bold;
     background-color: var(--clr-main);
     color: white;
     text-decoration: none;
+}
+
+.hero__video-container {
+    height: calc(100vh - 100px);
+    overflow: hidden;
 }
 
 .hero__video {

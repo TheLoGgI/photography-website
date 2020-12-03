@@ -118,23 +118,26 @@
    border: 2px solid var(--clr-main);
  }
 
- /* .input-image {
-   display: none;
- } */
  .input-image::-webkit-file-upload-button {
-   visibility: hidden;
+   display: none;
  }
 
  .input-image {
-   background-color: teal;
    width: 200px;
    display: inline;
+   font-family: "Poppins";
+   margin-left: 1rem;
+   border-bottom: 2px solid var(--clr-main);
  }
 
  .btn-upload {
    display: inline-block;
-   max-width: 150px;
+   max-width: 200px;
    text-align: center;
    margin: 0;
+   font-size: var(--fnt-size16);
+ }
+ .image-upload {
+   margin-top: 2rem;
  }
 

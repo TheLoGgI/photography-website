@@ -107,15 +107,24 @@
    font-weight: bold;
  }
 
- .input-col {
+ .input-col,
+ .course__video-module {
    display: flex;
    flex-direction: column;
+   margin-top: 1.5rem;
+ }
+
+ .input-col textarea {
+  font-size: 16px;
+  font-family: "Poppins";
+  resize: vertical;
  }
 
  .input-field {
    display: inline-block;
    padding: .6em 1em;
    border: 2px solid var(--clr-main);
+   font-size: var(--fnt-size16);
  }
 
  .input-image::-webkit-file-upload-button {
@@ -132,7 +141,6 @@
 
  .btn-upload {
    display: inline-block;
-   max-width: 200px;
    text-align: center;
    margin: 0;
    font-size: var(--fnt-size16);
@@ -140,4 +148,40 @@
  .image-upload {
    margin-top: 2rem;
  }
+
+ .course__videoupload {
+  margin-top: 1rem;
+ }
+
+ .fa-times{
+   position: relative;
+   right: 2em;
+ }
+
+ .course__modules {
+   display: flex;
+   column-gap: 1rem;
+   /* margin-top: 2rem; */
+   /* align-items: 20%; */
+ }
+
+ .course__index {
+   font-size: 1.5rem;
+   font-weight: bold;
+   transform: translateY(2em);
+ }
+
+ .btn-submit {
+   background-color: var(--clr-secondry);
+   color: black;
+   margin-top: 2rem;
+   display: block;
+ }
+
+ .add-lektion {
+   margin: 2rem auto auto 1rem;
+   display: inline-block;
+   cursor: pointer;
+ }
+ 
 

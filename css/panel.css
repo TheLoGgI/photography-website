@@ -24,12 +24,13 @@
     color: var(--clr-main);
 }
 
-/* .picked {
-    padding: 1rem 1em;
-    background-color: #E6E6E6;
+.picked {
+    /* padding: 1rem 1em; */
+    /* background-color: #E6E6E6; */
+    
     font-weight: bold;
-    border-left: 5px solid var(--clr-main);
-} */
+    /* border-left: 5px solid var(--clr-main); */
+}
 
 .sidePanelMenu {
     height: 63px;
@@ -47,3 +48,93 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  /* 
+  SPA APP
+  */
+
+ .grid-admin {
+   display: grid;
+   grid-template-columns: 25% 1fr 4rem;
+ }
+
+ .page__course {
+   background-color: #E6E6E6;
+   width: 100%;
+   padding: 1em 1em 1em 1.6em;
+   margin-top: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+ }
+
+ .btn {
+   font-size: var(--fnt-size18);
+   padding: .6em 1em;
+   font-weight: bold;
+   background-color: var(--clr-main);
+   color: white;
+   border: none;
+   cursor: pointer;
+   margin-left: 1em;
+   appearance: none;
+ }
+
+ .btn-edit:hover {
+   background-color: #4240e6;
+ }
+
+ .btn-delete {
+   background-color: #ADADAD;
+   color: #404040;
+ }
+
+ .btn-delete:hover {
+   color: white;
+   background-color: #FF4B4B;
+ }
+
+ /* Views */
+
+ .create-course-grid {
+   display: grid;
+   grid-template-columns: .8fr 1fr;
+   margin-top: 1rem;
+   column-gap: 2rem;
+ }
+
+ .course__title {
+   font-weight: bold;
+ }
+
+ .input-col {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .input-field {
+   display: inline-block;
+   padding: .6em 1em;
+   border: 2px solid var(--clr-main);
+ }
+
+ /* .input-image {
+   display: none;
+ } */
+ .input-image::-webkit-file-upload-button {
+   visibility: hidden;
+ }
+
+ .input-image {
+   background-color: teal;
+   width: 200px;
+   display: inline;
+ }
+
+ .btn-upload {
+   display: inline-block;
+   max-width: 150px;
+   text-align: center;
+   margin: 0;
+ }
+

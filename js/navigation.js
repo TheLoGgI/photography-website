@@ -30,7 +30,7 @@ function moveSelection(navElement) {
     const selectedRect = selectedItem.getBoundingClientRect()
 
     selection.style.transform = `translateX(${selectedRect.x + 5 + 'px'})`
-    selection.style.transition = 'transform .3s ease, width .4s ease'
+    selection.style.transition = 'transform .3s ease'
     
 }
 

@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/d577d4a2e5.js" crossorigin="anonymous"></script>
     <link href="css/panel.css" rel="stylesheet"/>
 </head>
-<body>
+<body onhashchange="pageChange()"> 
     <header class="header">
         <img class="header__trademark" src="/images/Logo.svg" alt="Puk Damgaard Trademark">
         <nav class="navigation">
@@ -24,14 +24,88 @@
         </nav>
         <div id="navSelection" class="selection"></div>
     </header>
-    <aside id="panel-sidemenu" class="sidenav">
-        <a href="#about" class="sidenav__item picked">Administrer videoer</a>
-        <a href="#services" class="sidenav__item">Upload Kursus</a>
-        <a href="#clients" class="sidenav__item">Analyse</a>
-        <div id="sidePanelMenu" class="sidePanelMenu"></div>
-    </aside>
+    <div class="grid-admin">
+        <aside id="panel-sidemenu" class="sidenav">
+            <a href="#adminstration" class="sidenav__item picked">Administrer videoer</a>
+            <a href="#upload" class="sidenav__item">Opret Kursus</a>
+            <a href="#analyse" class="sidenav__item">Analyse</a>
+            <div id="sidePanelMenu" class="sidePanelMenu"></div>
+        </aside>
+        <div class="grid-views">
+            <section id="adminstration" class="page">
+                <h1>Kursuser</h1>
+                <div class="page__course">
+                    <p class="course__title">Introduktion til produktfotografi</p>
+                    <p class="course__sales">Solgt 
+                        <span class="sold">263</span>
+                    </p>
+                    <p class="course__views">Visninger 
+                        <span class="views">263</span>
+                    </p>
+                    <p class="course__likes">Synes om 
+                        <span class="likes">263</span>
+                    </p>
+                    <div class="button-actions">
+                        <button class="btn btn-edit">Rediger</button>
+                        <button class="btn btn-delete" title="Slet kursus">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
+    <section id="upload" class="page">
+    <h1>Opret Kursus</h1>
+    <form class="create-course-grid">
+        <div class="grid-col">
+
+            <div class="input-col">
+                <label for="coursetitle">Kursus titel</label>
+                <input type="text" class="input-field" name="title" id="coursetitle" >
+            </div>
+            <div class="input-col">
+                <label for="coursedescription">Kursus beskrivelse</label>
+                <textarea cols="30" rows="10" class="input-field" name="description" id="coursedescription" ></textarea>
+            </div>
+            <div class="input-col">
+                <label for="coursedifficulty">Kursus niveau</label>
+                <select class="input-field" name="difficulty" id="coursedifficulty" >
+                    <option value="begynder">Begynder</option>
+                    <option value="erfaren">Erfaren</option>
+                    <option value="avanceret">Avanceret</option>
+                </select>
+            </div>
+            <div class="input-col">
+                <label for="courseprice">Kursus pris</label>
+                <input type="number" class="input-field" name="price" id="courseprice" step="50" >
+            </div>
+            
+                <label for="courseimage" class="btn btn-upload">Kursus billed</label>
+                <input type="file" class="input-image" name="image" id="courseimage">
+            
+        </div>
+
+        <div class="grid-col">
+            <div class="input-col">
+                <label for="coursetitle">Kursus titel</label>
+                <input type="text" class="input-field" name="title" id="coursetitle" >
+                
+                <button>Upload</button>
+                
+            </div>
+        </div>
+    </form>
+  </section>
+
+    <section id="analyse" class="page">
+    <h1>Analyse</h1>
+    
+  </section>
+        </div>
+    </div>
+    
     <script type="text/javascript" src="js/navigation.js"></script>
+    <script type="text/javascript" src="js/spa.js"></script>
 
 </body>
 </html>

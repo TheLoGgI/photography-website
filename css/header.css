@@ -35,11 +35,6 @@
     cursor: pointer;
 }
 
-.navigation__login {
-    /* font-weight: bold;
-    color: var(--clr-main); */
-}
-
 .selection {
     position: absolute;
     background-color: var(--clr-main);

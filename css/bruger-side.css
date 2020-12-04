@@ -7,7 +7,27 @@
 
 }
 
-.overskrift-h2 {
+.bruger-overskrift-h1{
+font-size: var(--fnt-size45);
+
+}
+#bruger-navn{ display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rem 0; 
+    font-size: ;
+
+}
+#bruger-konto-link{text-decoration: none;}
+
+.bruger-instilinger{
+text-decoration: none;
+color:var(--clr-main);
+}
+
+.kurser{}
+
+.bruger-overskrift-h2 {
     font-weight: 300;
     margin: 4rem  0 3rem 0 ;
  }

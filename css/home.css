@@ -108,6 +108,10 @@
     text-decoration: none;
 }
 
+.kurser-pris {
+    color: #4D4BFF;
+}
+
 .nyhedsbreve {
     background-color: #68BAA6;
 }

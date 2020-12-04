@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="315" height="52" viewBox="0 0 315 52">
+  <g id="Group_282" data-name="Group 282" transform="translate(-2317.67 -198.973)">
+    <text id="Puk_" data-name="Puk " transform="translate(2317.67 237.973)" fill="#fff" font-size="37" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Puk </tspan></text>
+    <text id="Damgaard" transform="translate(2439.67 235.973)" fill="#fff" font-size="35" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Damgaard</tspan></text>
+    <g id="Group_75" data-name="Group 75" transform="translate(2396.018 207.766)">
+      <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(-0.348 0.207)" fill="none" stroke="#fff" stroke-width="3">
+        <circle cx="16.5" cy="16.5" r="16.5" stroke="none"/>
+        <circle cx="16.5" cy="16.5" r="15" fill="none"/>
+      </g>
+      <path id="Path_75" data-name="Path 75" d="M8017.683,9392.676v11.48l-15.289-8.832,10.359,5.993-15.584,8.584,10.04-5.452v17.324l.2-11.605,14.63,8.544-9.285-5.652,13.822-8.693-4.226,2.932-4.667,2.6v-5.584" transform="translate(-7995.852 -9390.225)" fill="none" stroke="#fff" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+.wrapper{padding: 0 4rem;
+}
+
+.flexbox-kurser-side {
+    display: flex;
+
+
+}
+
+.overskrift-h2 {
+    font-weight: 300;
+    margin: 4rem  0 3rem 0 ;
+ }
+
+.kursus-container{
+
+    margin: 0 3% 0 0
+}
+
+.kursus__img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    ;
+}
+
+.dots {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    margin-top: 20px;
+    width: 100%;}

@@ -43,11 +43,7 @@ function moveSelection(navElement) {
  * @return {null}
  */
 function navgationSelectionHandler(navElement, className , callback = null) {
-    // const navElement = document.getElementById(id)
     for (const element of navElement.children) {
-        // if (element.tagName === 'DIV') {
-        //     return
-        // }
        
         element.addEventListener('click', (e) => {
             navigationRemoveClass(navElement, className)
@@ -63,7 +59,7 @@ function navgationSelectionHandler(navElement, className , callback = null) {
  * Removes all targed classname from previous navigation element.
  * @param  {Id || Node} NavigationElement Targets of the navigation 
  * @param  {String} className classname of the targets navigation element
- * @return {null}      [description]
+ * @return {null}      
  */
 function navigationRemoveClass(id, className) {
     let navElement = null
@@ -86,28 +82,19 @@ function navigationRemoveClass(id, className) {
 
 }
 
-function sidePanel(navElement) {
-    const selection = document.getElementById('sidePanelMenu')
-    const selectedItem = seletedMenuItem(navElement, 'picked')
-    const selectedRect = selectedItem.getBoundingClientRect()
-    selection.style.transform = `translateY(${selectedRect.y - 100 + 'px'})`
-    selection.style.transition = 'transform .3s ease, width .4s ease'
-    
-}
-
-
 window.addEventListener('DOMContentLoaded', () => {
     const navElement = document.getElementById('menu')
     navgationSelectionHandler(navElement, 'selected', moveSelection)
     
+    // Gives time for Font Awesome icons to load in
     setTimeout( () => {
         moveSelection(navElement)
     }, 300)
 
-    const panelSideMenu = document.getElementById('panel-sidemenu')
-    if (panelSideMenu) {
-        navgationSelectionHandler(panelSideMenu, 'picked', sidePanel)
-    }
+    // const panelSideMenu = document.getElementById('panel-sidemenu')
+    // if (panelSideMenu) {
+    //     navgationSelectionHandler(panelSideMenu, 'picked', sidePanel)
+    // }
     window.addEventListener('resize', () => moveSelection(navElement))
 })
 

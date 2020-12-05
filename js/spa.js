@@ -6,7 +6,7 @@ class SpaService {
   constructor(defaultPage) {
     this.defaultPage = defaultPage;
     this.pages = document.querySelectorAll(".page");
-    this.navItems = document.querySelectorAll(".tabbar a");
+    this.navItems = document.querySelectorAll(".sidenav a");
     this.pageChange();
   }
 
@@ -28,11 +28,13 @@ class SpaService {
   setActiveTab(pageId) {
     for (let navItem of this.navItems) {
       if (`#${pageId}` === navItem.getAttribute("href")) {
-        navItem.classList.add("active");
+        navItem.classList.add("picked");
+        this.sidePanel(navItem)
       } else {
-        navItem.classList.remove("active");
+        navItem.classList.remove("picked");
       }
     }
+
   }
 
   // navigate to a new view/page by changing href
@@ -49,6 +51,15 @@ class SpaService {
     }
     this.showPage(page);
   }
+
+  // Sidepanel marker change - Lasse
+  sidePanel(navElement) {
+    const selection = document.getElementById('sidePanelMenu')
+    const selectedRect = navElement.getBoundingClientRect()
+    selection.style.transform = `translateY(${selectedRect.y - 100 + 'px'})`
+    selection.style.transition = 'transform .3s ease, width .4s ease'
+    
+}
 }
   
   let spaService = new SpaService("adminstration");

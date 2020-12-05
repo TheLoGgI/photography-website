@@ -1,0 +1,53 @@
+.chart{
+    max-width: 1000px;
+    width: 100%;
+}
+
+.statistics {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+    margin-top: 2rem;
+}
+
+.statistics__item {
+    font-weight: bold;
+    border-bottom: 3px solid #4e4bff00;
+    cursor: pointer;
+}
+.statistics__item:hover {
+    border-bottom: 3px solid #4e4bff7c;
+}
+
+.popular-courses h2 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.pop-course {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 5% 30% 25% auto;
+    /* column-gap: 2rem; */
+    align-items: center;
+    /* justify-content: space-around; */
+    margin: 2rem 1rem;
+    font-size: 1rem;
+}
+.course-favorite{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.pop-course-image-container {
+    width: 300px;
+    /* height: 300px; */
+    overflow: hidden;
+    /* margin: 0 2rem 0 2rem; */
+}
+
+.pop-course-image {
+    width: 100%;
+    object-fit: cover;
+    display: inline;
+}
+

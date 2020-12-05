@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Adminstration</title>
-    <link href="css/commen.css" rel="stylesheet"/>
-    <link href="css/header.css" rel="stylesheet"/>
+    <link href="css/commen.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/d577d4a2e5.js" crossorigin="anonymous"></script>
-    <link href="css/panel.css" rel="stylesheet"/>
+    <link href="css/panel.css" rel="stylesheet" />
+    <link href="css/panel-analysis.css" rel="stylesheet" />
 </head>
-<body onhashchange="pageChange()"> 
+
+<body onhashchange="pageChange()">
     <header class="header">
         <img class="header__trademark" src="/images/Logo.svg" alt="Puk Damgaard Trademark">
         <nav class="navigation">
             <div id="menu" class="navgigation__menu">
                 <a href="#" class="navigation__links ">Forside</a>
-                <a href="#" class="navigation__links">Kurser</a> 
+                <a href="#" class="navigation__links">Kurser</a>
                 <a href="#" class="navigation__links navigation__login selected">Bruger</a>
             </div>
             <i tabindex="0" class="fas fa-shopping-cart"></i>
@@ -34,114 +38,140 @@
         <div class="grid-views">
             <section id="adminstration" class="page">
                 <h1>Kursuser</h1>
-                <div class="page__course">
-                    <p class="course__title">Introduktion til produktfotografi</p>
-                    <p class="course__sales">Solgt 
-                        <span class="sold">263</span>
-                    </p>
-                    <p class="course__views">Visninger 
-                        <span class="views">263</span>
-                    </p>
-                    <p class="course__likes">Synes om 
-                        <span class="likes">263</span>
-                    </p>
-                    <div class="button-actions">
-                        <button class="btn btn-edit">Rediger</button>
-                        <button class="btn btn-delete" title="Slet kursus">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
+                <p id="missingCourses"> Du har ingen uploadet kurser</p>
+                <div id="courses" class="courses"></div>
             </section>
 
-    <section id="upload" class="page">
-    <h1>Opret Kursus</h1>
-    <form id="createCourse" class="create-course-grid">
-        <div class="grid-col">
+            <section id="upload" class="page">
+                <h1>Opret Kursus</h1>
+                <form id="createCourse" class="create-course-grid">
+                    <div id="loading" class="loading-screen">
+                        <i class="fas fa-spinner"></i>
+                        <p>Vent mens vi uploader dine filer..</p>
+                    </div>
+                    <div class="grid-col">
 
-            <div class="input-col">
-                <label for="coursetitle">Kursus titel</label>
-                <input type="text" class="input-field" name="title" id="coursetitle" required>
-            </div>
-            <div class="input-col">
-                <label for="coursedescription">Kursus beskrivelse</label>
-                <textarea cols="32" rows="8" class="input-field" name="description" id="coursedescription" ></textarea>
-            </div>
-            <div class="input-col">
-                <label for="coursedifficulty">Kursus niveau</label>
-                <select class="input-field" name="difficulty" id="coursedifficulty" >
-                    <option value="begynder">Begynder</option>
-                    <option value="erfaren">Erfaren</option>
-                    <option value="avanceret">Avanceret</option>
-                </select>
-            </div>
-            <div class="input-col">
-                <label for="courseprice">Kursus pris</label>
-                <input type="number" class="input-field" name="price" id="courseprice" required>
-            </div>
-            <div class="image-upload">
-                <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload Billed</label>
-                <input type="file" class="input-image" name="image" id="courseimage">
-            </div>
-        </div>
-        
-        <div class="grid-col">
-            <div class="input-col">
-                <label for="coursetitle">Intro title</label>
-                <input type="text" class="input-field" name="introtitle" id="coursetitle" required>
-                <div class="course__videoupload">
-                    <label for="courseintro" class="btn btn-upload">Upload</label>
-                    <input type="file" class="input-image" name="introvideo" id="courseintro" required>
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-
-            <div id="lektions" class="lections">
-                <div class="course__modules">
-                    <em class="course__index">1.</em>
-                    <div class="course__video-module">
-                        <label for="courselektion1">Lektions navn</label>
-                        <input type="text" class="input-field" name="videotitle1" id="courselektion1" required>
-                        <div class="course__videoupload">
-                            <label for="videofile1" class="btn btn-upload">Upload</label>
-                            <input type="file" class="input-image" name="lesson1" id="videofile1" required>
-                            <i class="fas fa-times"></i>
+                        <div class="input-col">
+                            <label for="coursetitle">Kursus titel</label>
+                            <input type="text" class="input-field" name="title" id="coursetitle" required>
+                        </div>
+                        <div class="input-col">
+                            <label for="coursedescription">Kursus beskrivelse</label>
+                            <textarea cols="32" rows="8" class="input-field" name="description"
+                                id="coursedescription"></textarea>
+                        </div>
+                        <div class="input-col">
+                            <label for="coursedifficulty">Kursus niveau</label>
+                            <select class="input-field" name="difficulty" id="coursedifficulty">
+                                <option value="begynder">Begynder</option>
+                                <option value="erfaren">Erfaren</option>
+                                <option value="avanceret">Avanceret</option>
+                            </select>
+                        </div>
+                        <div class="input-col">
+                            <label for="courseprice">Kursus pris</label>
+                            <input type="number" class="input-field" name="price" id="courseprice" required>
+                        </div>
+                        <div class="image-upload">
+                            <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload
+                                Billed</label>
+                            <input type="file" class="input-image" name="image" id="courseimage">
                         </div>
                     </div>
+
+                    <div class="grid-col">
+                        <div class="input-col">
+                            <label for="coursetitle">Intro title</label>
+                            <input type="text" class="input-field" name="introtitle" id="coursetitle" required>
+                            <div class="course__videoupload">
+                                <label for="courseintro" class="btn btn-upload">Upload</label>
+                                <input type="file" class="input-image" name="introvideo" id="courseintro" required>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+
+                        <div id="lektions" class="lections">
+                            <div class="course__modules">
+                                <em class="course__index">1.</em>
+                                <div class="course__video-module">
+                                    <label for="courselektion1">Lektions navn</label>
+                                    <input type="text" class="input-field" name="videotitle1" id="courselektion1"
+                                        required>
+                                    <div class="course__videoupload">
+                                        <label for="videofile1" class="btn btn-upload">Upload</label>
+                                        <input type="file" class="input-image" name="lesson1" id="videofile1" required>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div id="addCourse" class="add-lektion">
+                            <button class="btn add-btn"><i class="fas fa-plus"></i></button>
+                            <span>Tilføj lektion</span>
+                        </div>
+
+
+                        <input type="submit" class="btn btn-submit" value="Opret Kursus">
+                    </div>
+                </form>
+            </section>
+
+            <section id="analyse" class="page">
+                <h1>Analyse</h1>
+                <ul class="statistics">
+                    <li class="statistics__item">Solgte kurser</li>
+                    <li class="statistics__item">Visninger</li>
+                </ul>
+                <div class="chart">
+                    <canvas id="myChart" width="200" height="100"></canvas>
                 </div>
-
-            </div>
-
-            
-            <div id="addCourse" class="add-lektion">
-                <button  class="btn add-btn"><i class="fas fa-plus"></i></button>
-                <span>Tilføj lektion</span>
-            </div>
-
-
-            <input type="submit" class="btn btn-submit" value="Opret Kursus">
-        </div>
-    </form>
-    </section>
-
-    <section id="analyse" class="page">
-    <h1>Analyse</h1>
-    
-    </section>
+                <div class="popular-courses">
+                    <h2>Mest Populære kurser</h2>
+                    <ul>
+                        <hr>
+                        <li class="pop-course">
+                            <span class="course-favorite">1</span>
+                            <div class="pop-course-image-container">
+                                <img class="pop-course-image" src="./images/kursus1.jpg" alt="kursus1">
+                            </div>
+                            <p class="courseTitle">Avanceret Lysopsætning</p>
+                            <p class="courseTitle">views <span>231</span></p>
+                        </li>
+                        <hr>
+                        <li class="pop-course">
+                            <span class="course-favorite">2</span>
+                            <div class="pop-course-image-container">
+                                <img class="pop-course-image" src="./images/kursus1.jpg" alt="kursus1">
+                            </div>
+                            <p class="courseTitle">Avanceret Lysopsætning</p>
+                            <p class="courseTitle">views <span>231</span></p>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="js/spa.js"></script>
     <script type="text/javascript" src="js/navigation.js"></script>
-    
+
     <!-- firestore storage -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
-    <script type="text/javascript" src="js/firebaseInitialization.js"></script>
+    <script type="text/javascript" src="js/firebase.js"></script>
     <script type="text/javascript" src="js/firestorage.js"></script>
 
     <script type="text/javascript" src="js/create-course.js"></script>
+    <script type="text/javascript" src="js/manage-courses.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
 
 </body>
+
 </html>

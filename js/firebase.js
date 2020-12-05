@@ -20,3 +20,20 @@ function createCourse(course) {
             console.error("Error writing document: ", error);
         });
 }
+
+function deleteCourse(course) {
+
+    const key = course.dataset.courseid
+    classToggle(course, 'removed-course')
+    
+    setTimeout( () => {
+        courseRef.doc(key).delete().then(function() {
+            console.log("Document successfully deleted!", key);
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);
+        });
+
+    }, 550)
+}
+
+

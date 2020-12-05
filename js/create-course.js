@@ -1,32 +1,25 @@
-const couseForm = document.getElementById('createCourse')
-const addCourse = document.getElementById('addCourse')
+const _couseForm = document.getElementById('createCourse')
+const _addCourse = document.getElementById('addCourse')
 const _lektionsList = document.getElementById('lektions')
 
-const _lektionsArray = [
-    {
-        order: 1,
-        courseTitle: '',
-        videoFile: ''
-    }
-]
 
 let _lessonCounter = 1 // Global counter for lessons
-addCourse.addEventListener('click', e => {addLektion()})
+_addCourse.addEventListener('click', e => {addLektion()})
 
 /**
  * Creates a structured object, that is sent to firebase
  * @param  {event} SubmitEvent Used to stop the default behaivor of form submit
  * @return {null}      
  */
-couseForm.addEventListener('submit', e => {
+_couseForm.addEventListener('submit', e => {
     e.preventDefault()
-
+    document.getElementById('loading').style.display = 'flex'
     // Creates FormData object in an array-like structure
-    const formData = new FormData(couseForm)
+    const formData = new FormData(_couseForm)
 
     // Converts the formdata to an object
     const formObject = Object.fromEntries(Array.from(formData));
-    console.log(formObject);
+
 
     toFilePath(formObject, 'image')
     toFilePath(formObject, 'introvideo')
@@ -44,38 +37,41 @@ couseForm.addEventListener('submit', e => {
                 key: randomKey(),
                 "title": formObject[prop]
             }
-            delete formObject[prop]
+            delete formObject[prop] // videotitle property on the object 
 
         } else if (prop.includes('lesson')) {
             lessons[index].video = formObject[prop]
-            
-
-            delete formObject[prop]
+            delete formObject[prop] // lesson property on the object 
         }
     }
 
-    // cleans object
+    // Cleans object
     lessons.shift()
+    
     
     const isAllFilesResolved = []
     for (const lesson of lessons) {
-        // isAllFilesResolved.push(uploadFirestorage(video, title))
         isAllFilesResolved.push(toFilePath(lesson, 'video'))
-        
     }
-
 
     Promise.all(isAllFilesResolved).then(values => {
         // remove loading
-        console.log('All vidoes are uploaded');
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none'
+            console.log('All vidoes are uploaded');
+        }, 2000)
+        
     })
 
 
     formObject.lessons = lessons
+    formObject.sold = getRandomInt(200)
+    formObject.views = getRandomInt(200)
+    formObject.likes = getRandomInt(200)
     console.log(formObject);
     createCourse(formObject)
 
-    couseForm.reset()
+    _couseForm.reset()
 })
 
 /**
@@ -90,7 +86,8 @@ function randomKey(size = 6) {
     for (let i = 0; i < size; i++) {
       newString += char[Math.floor(Math.random() * char.length)]
     }
-    return newString.toString(16)
+    console.log(newString);
+    return newString
   }
 
 
@@ -127,10 +124,10 @@ function addLektion() {
  * @return {Promise}  Returns promise of successfully uploaded mediafile
  */
 function toFilePath(formdata, prop) {
-
+    console.log(formdata);
     let promis
     if (formdata[prop].size !== 0) {
-        const name = formdata.title.replaceAll(' ', '§').toLowerCase() + `?${prop.toLowerCase()}-${formdata.key}`
+        const name = formdata.title.replaceAll(' ', '§').toLowerCase() + `?${prop.toLowerCase()}${formdata.key ? '-' + formdata.key : ''}`
         promis = uploadFirestorage(
             formdata[prop], 
             name
@@ -157,6 +154,7 @@ function inputFileChangeHandler() {
     })
     
 }
+
 
 /**
  * Checks for the correct filetype of the mediafile
@@ -194,6 +192,17 @@ function fileTypeCheck(e) {
 }
 
 inputFileChangeHandler()
+
+
+
+/**
+ * Checks for the correct filetype of the mediafile
+ * @param  {Int} MaxValue Determens the maximum value of the randomizer
+ * @return {Int} Returns Int beteewn 0 and max
+ */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
 
 
 

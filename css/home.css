@@ -142,6 +142,13 @@
     margin: 80px 0px 0px 0px;
 }
 
+.image_zoom {
+    display: block;
+    width: 300px;
+    height: 230px;
+    overflow: hidden;
+}
+
 .flexbox-kategorier {
     display: flex;
     justify-content: space-around;
@@ -154,13 +161,14 @@
     opacity: 1.0;
     width: 300px;
     height: 230px;
-    transition: transform .2s;
+    object-fit: cover;
+    transition: transform .4s;
 }
 
 .kategori__img:hover{
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
 }
 
 .fotografen-h1 {

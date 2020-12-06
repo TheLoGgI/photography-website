@@ -290,22 +290,13 @@
 
 .buttom-footer {
     background-color: #40786A;
-    padding: 20px;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
 .logo-hvid {
-    width: 15%;
-    margin: 0 0 0 130px;
-}
-
-.buttom-footer-text {
-    margin-right: 130px;
-    padding-top: 5px;
-}
-
-.flexbox-button-footer {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    padding: 10px;
+    max-width: 240px;
 }

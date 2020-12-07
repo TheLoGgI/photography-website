@@ -24,8 +24,6 @@ text-decoration: none;
 color:var(--clr-main);
 }
 
-.kurser{}
-
 .bruger-overskrift-h2 {
     font-weight: 300;
     margin: 4rem  0 3rem 0 ;
@@ -40,7 +38,6 @@ color:var(--clr-main);
     width: 300px;
     height: 180px;
     object-fit: cover;
-    ;
 }
 
 .dots {
@@ -49,6 +46,25 @@ color:var(--clr-main);
     z-index: -1;
     margin-top: 20px;
     width: 100%;}
+
+
+.bruger-knap{
+
+    background-color: transparent /* Green */
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 0px
+
+}
+
 
 
     /* The Modal (background) */
@@ -74,6 +90,12 @@ color:var(--clr-main);
     border: 1px solid #888;
     width: 80%;
   }
+
+  .modal-header{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   /* The Close Button */
   .close {
@@ -88,4 +110,19 @@ color:var(--clr-main);
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .aendre-box{
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+
+
+  }
+
+  #aendre-h2{
+    font-weight: 300;
+    font-size: var(--fnt-size16);
+
+
   }

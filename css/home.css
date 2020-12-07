@@ -188,17 +188,31 @@
 }
 
 .selvportræt {
+    display: block;
     height: 500px;
     width: 500px;
 }
 
 /* SLIDESHOW*/
 
+.slideshow {
+    position: relative;
+    
+}
+
+.dots-slideshow {
+    position: absolute;
+    margin-top: 13.5%;
+    z-index: -1;
+    width: 100%;
+}
+
 .slideshow-container {
     max-width: 60%;
     position: relative;
     margin: auto;
     margin-bottom: 100px;
+    background-color: white;
 }
 
 /*PILE*/

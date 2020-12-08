@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d577d4a2e5.js" crossorigin="anonymous"></script>
     <link href="css/commen.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
-    <link href="css/home.css" rel="stylesheet" />
+
     <link href="css/video-side.css" rel="stylesheet" />
 </head>
 
@@ -42,22 +42,79 @@
                 </video>
             </div>
             <div class="playlist">
-                <div class="episode">
-                    <img src="playicon" class="playicon">
+                <div class="episode" onclick="">
                     <div class="flex-episode">
+                        <i class="fas fa-play" Id="playicon"></i>
                         <p class="episode-titel">titel</p>
                         <p class="episode-timer">2:60</p>
                     </div>
                     <progress class="episode-progress" value="32" max="100"> 32% </progress>
                 </div>
-
+                <div class="episode" id="episodeSecond" onclick="">
+                    <div class="flex-episode">
+                        <i class="fas fa-lock" Id="playicon"></i>
+                        <p class="episode-titel">titel</p>
+                        <p class="episode-timer">2:60</p>
+                    </div>
+                    <progress class="episode-progress" value="32" max="100"> 32% </progress>
+                </div>
             </div>
         </section>
-        <Section id="destription-section">
-            <div id="info-element">
+
+        <img src="images/Repeat Grid 11.svg" class="dots">
+        <Section class="destription-section">
+            <div class="info-element">
+                <h2 class="kurser-overskrift">om dette kursus</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                    <br><br>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.
+                    <br><br> Det som du får ud af det:
+                <div class="info-points">
+                    <br><br><i class="fas fa-circle" id="point-dot"></i> Basisk kameratekniske færdigheder
+                    <br><br><i class="fas fa-circle" id="point-dot"></i> Istand til at skabe en god og spændene historie
+                    til dine kunder med masser af dynamik
+                    <br><br><i class="fas fa-circle" id="point-dot"></i> Blive klogere på kameraets funktioner
+                    <br><br><i class="fas fa-circle" id="point-dot"></i> Kreativ fotografering
+                </div>
+                <br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+
+                </p>
             </div>
-            <div id="stats-element">
+            <div class="stats-section">
+                <div class="pris-section">
+                    <div class="pris-element">
+                        <p>pris</p>
+                        <h2>1.500</h2>
+                    </div>
+                    <div class="like-icons">
+                        <img src="images/Path 180.svg" class="">
+                        <img src="images/Group 300.svg" class="">
+                    </div>
+                </div>
+               <a href="kurser.html" class="btn hero__btn">læg i kurve</a>
+                <div class="stats-element">
+                    <div>
+                        <p>Niveau</p>
+                    </div>
+                    <div>
+                        <p>timer</p>
+                    </div>
+                    <div>
+                        <p>lektioner</p>
+                    </div>
+                    <div>
+                        <p>Synes om</p>
+                    </div>
+                    <div>
+                        <p>Købt</p>
+                    </div>
+                </div>
             </div>
+
         </Section>
 
 

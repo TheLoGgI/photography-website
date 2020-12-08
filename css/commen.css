@@ -28,5 +28,12 @@ body {
     font-family: var(--ff-body);
 }
 
-.wrapper{padding: 0 4rem;
+p {font-size: 1rem}
+
+h2{font-size: 2rem}
+
+.wrapper{
+margin: auto;
+    padding: 0 4rem;
+    max-width: 1520px;
 }

@@ -1,5 +1,7 @@
 .video-section{
 display: flex;
+justify-content: flex-start ;
+margin: 0 0 4rem 0 ;
 
 }
 
@@ -8,26 +10,35 @@ display: flex;
 }
 .playlist{
 width: 40%;
+height: 100%;
+overflow: auto;
 
 }
 
 .episode{
   background-color: #E6E6E6;
   margin: 0 0 0 2rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 0rem 0 0rem;
+  cursor: pointer;
+}
+#episodeSecond{
+margin: 1rem 0 0 2rem
+
 }
 
-.playicon{
-float: left;
+#playicon{
+padding: 0 0 0 1rem
 }
 
 .flex-episode{
 display: flex;
-justify-content: space-between;
+align-items: baseline;
+margin: 0 0 0.3rem 0;
 }
 
 .episode-timer{
-padding: 0 0 0 0
+margin: 0 0 0 auto;
+padding: 0 1rem 0 0;
 }
 
 .episode-titel{
@@ -38,12 +49,66 @@ margin: 0 1rem 0 1rem
 
 .episode-progress {
   -webkit-appearance: none;
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin: 0 0 0 0rem;
+  clear: both;
 }
 
 progress::-webkit-progress-bar {
-  background-color: orange;
+  background-color:#C7C7C7;
 }
 
 progress::-webkit-progress-value {
-  background-color: purple;
+  background-color: #4D4BFF;
 }
+
+.dots{
+  display: block;
+position: absolute;
+left:0;
+width: 100%;
+}
+.destription-section{
+  display: flex;
+margin: 15rem 0 0 0;
+}
+
+.info-element{
+width: 60%;
+margin: 0 2rem 0 0
+}
+
+.stats-section{
+width:30%;
+margin: 0rem;
+background-color: gray
+
+}
+.kurser-overskrift {
+  margin: 0rem 0 2rem 0
+}
+
+.info-points{
+margin: 0 0 0 2rem;
+}
+
+#point-dot{margin: 1rem}
+
+.hero__btn {
+  display: inline-block;
+  font-size: var(--fnt-size20);
+  padding: 1em 1.5em;
+  font-weight: bold;
+  background-color: var(--clr-main);
+  color: white;
+  text-decoration: none;
+}
+
+.stats-element{
+display: flex;
+flex-wrap: wrap;
+
+}
+

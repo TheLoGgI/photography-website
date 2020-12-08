@@ -69,7 +69,10 @@ progress::-webkit-progress-value {
 position: absolute;
 left:0;
 width: 100%;
-}.destription-section{
+
+}
+
+.destription-section{
   display: flex;
 margin: 15rem 0 0 0;
 }
@@ -147,4 +150,7 @@ padding: 0 3rem;
 }
 .stat-img{
 width: 35px
+}
+.stat-header{
+
 }

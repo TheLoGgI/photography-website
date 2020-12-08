@@ -6,7 +6,7 @@ courseRef.onSnapshot(function (snapshotData) {
     });
 });
 
-function appendCourse({ description, difficulty, duration, title, image, lessons, price }) {
+async function appendCourse({ description, difficulty, duration, title, image, lessons, price }) {
     const htmlTemplate = `
             <div class="all-courses-line-seperator">
                 <div class="all-courses-element">

@@ -42,9 +42,8 @@ padding: 0 1rem 0 0;
 }
 
 .episode-titel{
-  display: inline;
-  font-weight: 500;
-  margin: 0 auto 0 1rem;
+font-weight: 500;
+margin: 0 1rem 0 1rem
 
 }
 
@@ -70,7 +69,10 @@ progress::-webkit-progress-value {
 position: absolute;
 left:0;
 width: 100%;
-}.destription-section{
+
+}
+
+.destription-section{
   display: flex;
 margin: 15rem 0 0 0;
 }
@@ -148,4 +150,7 @@ padding: 0 3rem;
 }
 .stat-img{
 width: 35px
+}
+.stat-header{
+
 }

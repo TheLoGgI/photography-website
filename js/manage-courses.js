@@ -13,11 +13,11 @@ courseRef.onSnapshot(function (snapshotData) {
     });
 
     if (courses.length >= 0) {
-        fdb.style.display = 'none'
-        gridLabels.style.display = 'grid'
-    }  else {
         fdb.style.display = 'block'
         gridLabels.style.display = 'none'
+    }  else {
+        fdb.style.display = 'none'
+        gridLabels.style.display = 'grid'
     }
     // console.log(courses);
     addDataPoint(myChart, courses)

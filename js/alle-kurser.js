@@ -6,7 +6,7 @@ courseRef.onSnapshot(function (snapshotData) {
     });
 });
 
-function appendCourse({ description, difficulty, duration, title, image, lessons }) {
+function appendCourse({ description, difficulty, duration, title, image, lessons, price }) {
     const htmlTemplate = `
             <div class="all-courses-line-seperator">
                 <div class="all-courses-element">
@@ -28,7 +28,7 @@ function appendCourse({ description, difficulty, duration, title, image, lessons
                         </div>
                         <div class="all-courses-price-container">
                             <div class="all-courses-price-allign">
-                                <p class="all-courses-price-text">400 kr</p>
+                                <p class="all-courses-price-text">${price} kr</p>
                                 <button class="all-courses-price-button">Læg i kurv</button>
                             </div>
                         </div>

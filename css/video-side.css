@@ -35,8 +35,15 @@ font-weight: 500;
 margin: 0 1rem 0 1rem
 
 }
-.episode-progress{
-margin: 0px;
-padding: 0px
 
+.episode-progress {
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: orange;
+}
+
+progress::-webkit-progress-value {
+  background-color: purple;
 }

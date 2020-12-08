@@ -4,6 +4,9 @@
             // Create storage ref
             let storageRef = firebase.storage().ref('lessons/' + filename)
 
+            console.log(file[0].duration);
+            console.dir(file);
+
             // Upload file
             let task = storageRef.put(file)
 
@@ -29,6 +32,8 @@
                 }
             })
         }
+
+        // Delete stored videos
 
 
                 

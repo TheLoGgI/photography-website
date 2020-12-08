@@ -26,11 +26,7 @@
 }
 
 .picked {
-    /* padding: 1rem 1em; */
-    /* background-color: #E6E6E6; */
-    
     font-weight: bold;
-    /* border-left: 5px solid var(--clr-main); */
 }
 
 .sidePanelMenu {
@@ -64,9 +60,22 @@
    width: 100%;
    padding: 1em 1em 1em 1.6em;
    margin-top: 2rem;
-   display: flex;
-   justify-content: space-between;
-   align-items: baseline;
+   display: grid;
+   grid-template-columns: 3fr repeat(3, 15%) 2fr;
+   align-items: center;
+ }
+
+ .grid-lables {
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 15%) 2fr;
+  grid-template-rows: 1fr;
+  padding: 0 1em 0em 1.6em;
+  margin-bottom: -1.5rem;
+  margin-top: 2rem;
+ }
+
+ .button-actions {
+  justify-self: end; 
  }
 
  .btn {
@@ -77,7 +86,7 @@
    color: white;
    border: none;
    cursor: pointer;
-   margin-left: 1em;
+   /* margin-left: 1em; */
    appearance: none;
  }
 
@@ -171,6 +180,7 @@
  .course__modules:hover {
   background-color: #ebebeb;
  }
+
  .course__index {
    font-size: 1.5rem;
    font-weight: bold;
@@ -180,12 +190,12 @@
  .btn-submit {
    background-color: var(--clr-secondry);
    color: black;
-   margin-top: 2rem;
+   margin: 4rem 0 8rem auto;
    display: block;
  }
 
  .add-lektion {
-   margin: 2rem auto auto 1rem;
+   margin: 2rem auto auto 0rem;
    display: inline-block;
    cursor: pointer;
  }

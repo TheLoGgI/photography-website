@@ -99,7 +99,7 @@ function addLektion() {
     _lessonCounter++
     const html = `
     <div class="course__modules">
-        <em class="course__index">${_lessonCounter}</em>
+        <em class="course__index">${_lessonCounter}.</em>
         <div class="course__video-module">
             <label for="courselektion1">Lektions navn</label>
             <input type="text" class="input-field" name="${'videotitle'+_lessonCounter}" id="courselektion1" required>
@@ -174,7 +174,6 @@ function fileTypeCheck(e) {
     }
      
     for (const requiredType of requiredFileType) {
-        console.log(requiredType === fileType);
         if (fileType !== requiredType) {
             // Error
             console.error('Wrong file type', element, 'required: ' + requiredFileType.toString());

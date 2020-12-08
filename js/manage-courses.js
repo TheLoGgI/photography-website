@@ -3,7 +3,6 @@ const _coursesList = document.getElementById('courses')
 
 const fdb = document.getElementById('missingCourses')
 
-
 courseRef.onSnapshot(function (snapshotData) {
     let courses = [];
     snapshotData.forEach(function (doc) {
@@ -13,11 +12,12 @@ courseRef.onSnapshot(function (snapshotData) {
     });
 
     if (!courses) {
-        fdb.style.display = 'none'
-    }  else {
         fdb.style.display = 'block'
+    }  else {
+        fdb.style.display = 'none'
     }
-
+    // console.log(courses);
+    addDataPoint(myChart, courses)
     appendCourses(courses);
     removeBtnEventHandler()
   });
@@ -35,15 +35,9 @@ function appendCourses(courses) {
       htmlTemplate += `
       <div class="page__course" data-courseid="${id}">
                         <p class="course__title">${title}</p>
-                        <p class="course__sales">Solgt : 
-                            <span class="sold">${sold}</span>
-                        </p>
-                        <p class="course__views">Visninger : 
-                            <span class="views">${views}</span>
-                        </p>
-                        <p class="course__likes">Synes om : 
-                            <span class="likes">${likes}</span>
-                        </p>
+                        <p class="course__sales">${sold}</p>
+                        <p class="course__views">${views}</p>
+                        <p class="course__likes">${likes}</p>
                         <div class="button-actions">
                             <button class="btn btn-edit">Rediger</button>
                             <button class="btn btn-delete" title="Slet kursus">

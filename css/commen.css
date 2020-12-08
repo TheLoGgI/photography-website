@@ -27,3 +27,6 @@
 body {
     font-family: var(--ff-body);
 }
+
+.wrapper{padding: 0 4rem;
+}

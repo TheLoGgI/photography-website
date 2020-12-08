@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>Adminstration</title>
-    
+    <link rel="icon" href="images/logo2.svg">
     <link href="css/commen.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/d577d4a2e5.js" crossorigin="anonymous"></script>
@@ -40,7 +40,7 @@
             <section id="adminstration" class="page">
                 <h1>Kurser</h1>
                 <p id="missingCourses"> Du har ingen uploadet kurser</p>
-                <div id="gridLabels" class="grid-lables"> 
+                <div id="gridLabels" class="grid-lables">
                     <p>Title</p>
                     <p>Solgt</p>
                     <p>Visninger</p>
@@ -60,7 +60,7 @@
 
                         <div class="input-col">
                             <label for="coursetitle">Kursus titel</label>
-                            <input type="text" class="input-field" name="title" id="coursetitle" >
+                            <input type="text" class="input-field" name="title" id="coursetitle">
                         </div>
                         <div class="input-col">
                             <label for="coursedescription">Kursus beskrivelse</label>
@@ -77,10 +77,11 @@
                         </div>
                         <div class="input-col">
                             <label for="courseprice">Kursus pris Kr.</label>
-                            <input type="number" class="input-field" name="price" id="courseprice" >
+                            <input type="number" class="input-field" name="price" id="courseprice">
                         </div>
                         <div class="image-upload">
-                            <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload Cover
+                            <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload
+                                Cover
                                 Billede</label>
                             <input type="file" class="input-image" name="image" id="courseimage">
                         </div>
@@ -89,10 +90,10 @@
                     <div class="grid-col">
                         <div class="input-col">
                             <label for="coursetitle">Introduktions video title</label>
-                            <input type="text" class="input-field" name="introtitle" id="coursetitle" >
+                            <input type="text" class="input-field" name="introtitle" id="coursetitle">
                             <div class="course__videoupload">
                                 <label for="courseintro" class="btn btn-upload">Upload</label>
-                                <input type="file" class="input-image" name="introvideo" id="courseintro" >
+                                <input type="file" class="input-image" name="introvideo" id="courseintro">
                                 <i class="fas fa-times"></i>
                             </div>
                         </div>
@@ -102,11 +103,10 @@
                                 <em class="course__index">1.</em>
                                 <div class="course__video-module">
                                     <label for="courselektion1">Lektions navn</label>
-                                    <input type="text" class="input-field" name="videotitle1" id="courselektion1"
-                                        >
+                                    <input type="text" class="input-field" name="videotitle1" id="courselektion1">
                                     <div class="course__videoupload">
                                         <label for="videofile1" class="btn btn-upload">Upload</label>
-                                        <input type="file" class="input-image" name="lesson1" id="videofile1" >
+                                        <input type="file" class="input-image" name="lesson1" id="videofile1">
                                         <i class="fas fa-times"></i>
                                     </div>
                                 </div>
@@ -176,10 +176,12 @@
 
     <script type="text/javascript" src="js/create-course.js"></script>
     <script type="text/javascript" src="js/manage-courses.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/charts.js"></script>
-    
+
 </body>
 
 </html>

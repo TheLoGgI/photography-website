@@ -56,17 +56,14 @@
         });
     }
 
-    function downloadFirestorage(path) {
+    async function downloadFirestorage(path) {
         // Create a reference with an initial file path and name
         const storageRef = firebase.storage().ref('lessons/' + path)
-        console.log(storageRef);
         // Get the download URL
-        storageRef.getDownloadURL().then(function(url) {
-        // Insert url into an <img> tag to "download"
-        return url
-        }).catch(function(error) {
-            console.error(error);
-        });
+        const source = await storageRef.getDownloadURL().then( url => url)
+        return source
     }
 
+        
+    
                 

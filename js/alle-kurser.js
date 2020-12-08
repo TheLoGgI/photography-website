@@ -6,12 +6,12 @@ courseRef.onSnapshot(function (snapshotData) {
     });
 });
 
-function appendCourse({ description, difficulty, duration, title, image, lessons }) {
+async function appendCourse({ description, difficulty, duration, title, image, lessons }) {
     const htmlTemplate = `
             <div class="all-courses-line-seperator">
                 <div class="all-courses-element">
                     <a class="all-courses-image-container" href="video-side.html">
-                        <img class="all-courses-image" src="${downloadFirestorage(image)}" alt="kursus-billede">
+                        <img class="all-courses-image" src="${await downloadFirestorage(image)}" alt="kursus-billede">
                     </a>
                     <div class="all-courses-split">
                         <div class="all-courses-text-container">

@@ -9,21 +9,27 @@
 .all-courses-element {
     height: 200px;
     display: flex;
+    width: 100%;
+}
+
+.all-courses-split {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .all-courses-image-container {
-    height: 100%;
-    background-color: blanchedalmond;
-    width: 25%;
+    height: 200px;
+    width: 360px;
 }
 
 .all-courses-image {
     height: 100%;
+    display: block;
+    border-radius: 10px;
 }
 
 .all-courses-text-container {
-    background-color: cadetblue;
-    width: 50%;
     padding-left: 2rem;
     padding-right: 2rem;
     display: flex;
@@ -31,12 +37,60 @@
     justify-content: space-between;
 }
 
-.all-courses-price-container {
-    background-color: cornsilk;
-    width: 25%;
+.all-courses-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.price-button {
+.all-courses-description-container {
+    width: 100%;
+}
+
+.all-courses-description {
+    font-weight: 300;
+    text-overflow: ellipsis;
+    max-height: 5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.all-courses-read-more {
+    color: #40ABE3;
+    text-decoration: none;
+}
+
+.all-courses-price-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.all-courses-price-allign {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.all-courses-price-text {
+    font-weight: bold;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.all-courses-price-button {
+    font-size: var(--fnt-size18);
+    padding: .6em 1em;
+    font-weight: bold;
+    background-color: var(--clr-main);
+    color: white;
+    border: none;
+    cursor: pointer;
+    appearance: none;
     width: 200px;
-    height: 30px;
+}
+
+.underline-seperator {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

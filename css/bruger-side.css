@@ -1,37 +1,34 @@
-
-
 .flexbox-kurser-side {
     display: flex;
     flex-wrap: wrap;
-
-
-
 }
 
-.bruger-overskrift-h1{
-font-size: var(--fnt-size45);
-
+.bruger-overskrift-h1 {
+    font-size: var(--fnt-size45);
 }
-#bruger-navn{ display: flex;
+
+#bruger-navn {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 8rem 0;
-
 }
-#bruger-konto-link{text-decoration: none;}
 
-.bruger-instilinger{
-text-decoration: none;
-color:var(--clr-main);
+#bruger-konto-link {
+    text-decoration: none;
+}
+
+.bruger-instilinger {
+    text-decoration: none;
+    color: var(--clr-main);
 }
 
 .bruger-overskrift-h2 {
     font-weight: 300;
-    margin: 4rem  0 3rem 0 ;
- }
+    margin: 4rem 0 3rem 0;
+}
 
-.kursus-container{
-
+.kursus-container {
     margin: 0 3% 0 0
 }
 
@@ -46,12 +43,12 @@ color:var(--clr-main);
     left: 0;
     z-index: -1;
     margin-top: 20px;
-    width: 100%; }
+    width: 100%;
+}
 
-
-.bruger-knap{
-
-    background-color: transparent /* Green */
+.bruger-knap {
+    background-color: transparent;
+    /* Green */
     color: white;
     padding: 0px 0px;
     text-align: center;
@@ -62,83 +59,81 @@ color:var(--clr-main);
     cursor: pointer;
     background-color: white;
     color: black;
-    border: 0px
-
+    border: 0px;
 }
 
+/* The Modal (background) */
 
-
-    /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
 
-  
-  /* Modal Content */
-  .modal-content {
+/* Modal Content */
+
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     width: 600px;
     border-radius: 1rem
-    
-  }
+}
 
-
-  .modal-header{ 
+.modal-header {
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px groove 0 0 0;
     box-shadow: 0px 1px #888888;
+}
 
-  }
-  
-  /* The Close Button */
-  .close {
+/* The Close Button */
+
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  .aendre-box{
-display: flex;
-padding: 1rem;
-align-items: flex-end;
-justify-content: space-between;
-border: 1px groove 0 0 0;
-  box-shadow: 0px 1px #888888;
+.aendre-box {
+    display: flex;
+    padding: 1rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 1px groove 0 0 0;
+    box-shadow: 0px 1px #888888;
+}
 
-  }
-
-
-  #aendre-h2{
+#aendre-h2 {
     font-weight: 300;
     font-size: var(--fnt-size16);
+}
 
-
-  }
-
-  #log-ud-bruger{
-   margin: auto auto;
-
-
-  }
+#log-ud-bruger {
+    margin: auto auto;
+}

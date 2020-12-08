@@ -2,6 +2,7 @@
 const _coursesList = document.getElementById('courses')
 
 const fdb = document.getElementById('missingCourses')
+const gridLabels = document.getElementById('gridLabels')
 
 courseRef.onSnapshot(function (snapshotData) {
     let courses = [];
@@ -11,10 +12,12 @@ courseRef.onSnapshot(function (snapshotData) {
       courses.push(course);
     });
 
-    if (!courses) {
+    if (courses.length >= 0) {
         fdb.style.display = 'block'
+        gridLabels.style.display = 'none'
     }  else {
         fdb.style.display = 'none'
+        gridLabels.style.display = 'grid'
     }
     // console.log(courses);
     addDataPoint(myChart, courses)

@@ -50,28 +50,38 @@ _couseForm.addEventListener('submit', e => {
     
     
     const isAllFilesResolved = []
+    let totalDuration = 0
+
     for (const lesson of lessons) {
         isAllFilesResolved.push(toFilePath(lesson, 'video'))
     }
 
-    Promise.all(isAllFilesResolved).then(values => {
+    console.log(isAllFilesResolved);
+    
+    Promise.all(isAllFilesResolved).then(videos => {
+        totalDuration = videos.reduce((accumulator, duration) => accumulator + duration)
+
         // remove loading
         setTimeout(() => {
             document.getElementById('loading').style.display = 'none'
             console.log('All vidoes are uploaded');
         }, 2000)
         
+        formObject.lessons = lessons
+        formObject.duration = Math.ceil(totalDuration)
+        formObject.sold = getRandomInt(200)
+        formObject.views = getRandomInt(200)
+        formObject.likes = getRandomInt(200)
+
+        console.log(formObject);
+
+        createCourse(formObject)
+
+        _couseForm.reset()
     })
 
 
-    formObject.lessons = lessons
-    formObject.sold = getRandomInt(200)
-    formObject.views = getRandomInt(200)
-    formObject.likes = getRandomInt(200)
-    console.log(formObject);
-    createCourse(formObject)
 
-    _couseForm.reset()
 })
 
 /**
@@ -86,7 +96,6 @@ function randomKey(size = 6) {
     for (let i = 0; i < size; i++) {
       newString += char[Math.floor(Math.random() * char.length)]
     }
-    console.log(newString);
     return newString
   }
 
@@ -124,7 +133,6 @@ function addLektion() {
  * @return {Promise}  Returns promise of successfully uploaded mediafile
  */
 function toFilePath(formdata, prop) {
-    console.log(formdata);
     let promis
     if (formdata[prop].size !== 0) {
         const name = formdata.title.replaceAll(' ', '§').toLowerCase() + `?${prop.toLowerCase()}${formdata.key ? '-' + formdata.key : ''}`

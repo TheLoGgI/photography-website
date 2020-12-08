@@ -39,7 +39,7 @@
             <section id="adminstration" class="page">
                 <h1>Kurser</h1>
                 <p id="missingCourses"> Du har ingen uploadet kurser</p>
-                <div class="grid-lables"> 
+                <div id="gridLabels" class="grid-lables"> 
                     <p>Title</p>
                     <p>Solgt</p>
                     <p>Visninger</p>
@@ -59,7 +59,7 @@
 
                         <div class="input-col">
                             <label for="coursetitle">Kursus titel</label>
-                            <input type="text" class="input-field" name="title" id="coursetitle" required>
+                            <input type="text" class="input-field" name="title" id="coursetitle" >
                         </div>
                         <div class="input-col">
                             <label for="coursedescription">Kursus beskrivelse</label>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="input-col">
                             <label for="courseprice">Kursus pris</label>
-                            <input type="number" class="input-field" name="price" id="courseprice" required>
+                            <input type="number" class="input-field" name="price" id="courseprice" >
                         </div>
                         <div class="image-upload">
                             <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload
@@ -88,10 +88,10 @@
                     <div class="grid-col">
                         <div class="input-col">
                             <label for="coursetitle">Intro title</label>
-                            <input type="text" class="input-field" name="introtitle" id="coursetitle" required>
+                            <input type="text" class="input-field" name="introtitle" id="coursetitle" >
                             <div class="course__videoupload">
                                 <label for="courseintro" class="btn btn-upload">Upload</label>
-                                <input type="file" class="input-image" name="introvideo" id="courseintro" required>
+                                <input type="file" class="input-image" name="introvideo" id="courseintro" >
                                 <i class="fas fa-times"></i>
                             </div>
                         </div>
@@ -102,10 +102,10 @@
                                 <div class="course__video-module">
                                     <label for="courselektion1">Lektions navn</label>
                                     <input type="text" class="input-field" name="videotitle1" id="courselektion1"
-                                        required>
+                                        >
                                     <div class="course__videoupload">
                                         <label for="videofile1" class="btn btn-upload">Upload</label>
-                                        <input type="file" class="input-image" name="lesson1" id="videofile1" required>
+                                        <input type="file" class="input-image" name="lesson1" id="videofile1" >
                                         <i class="fas fa-times"></i>
                                     </div>
                                 </div>

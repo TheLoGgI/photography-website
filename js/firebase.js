@@ -26,6 +26,38 @@ function deleteCourse(course) {
     const key = course.dataset.courseid
     classToggle(course, 'removed-course')
     
+    console.log(course);
+    // deleteFirestorage
+
+    const docRef = courseRef.doc(key)
+    docRef.get().then(function(doc) {
+        if (doc.exists) {
+            const course = doc.data()
+
+            // Removes course image
+            if (course.image !== 404) {
+                deleteFirestorage(course.image)
+            }
+
+            // Removes intro video
+            if (course.introvideo !== 404) {
+                deleteFirestorage(course.introvideo)
+            }
+
+            // Removes lessons videos
+            course.lessons.forEach( lesson => {
+                deleteFirestorage(lesson.video)
+            })
+
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+        }
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
+
+    // Removes firebase document
     setTimeout( () => {
         courseRef.doc(key).delete().then(function() {
             console.log("Document successfully deleted!", key);

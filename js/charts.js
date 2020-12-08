@@ -37,11 +37,8 @@ const myChart = new Chart(ctx, {
 });
 
 
-function addDataPoint(chart, courses) {
-    courses.forEach( course => {
-        chart.data.labels.push(course.title)
-        chart.data.datasets[0].data.push(course.sold)
-    })
-
+function addDataPoint(chart, course) {
+    chart.data.labels.push(course.title)
+    chart.data.datasets[0].data.push(course.sold)
     chart.update();
 }

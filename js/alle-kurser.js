@@ -13,9 +13,7 @@ function appendCourses(course) {
                                 <h2 class="all-courses-heading">Begynder fotokursus</h2>
                                 <div class="all-courses-description-container">
                                     <p class="all-courses-description">Dette kursus er for dig, der er nybegynder og
-                                        gerne
-                                        vil
-                                        lære de basale kameratekniske færdigheder. Efter kurset vil du
+                                        gerne vil lære de basale kameratekniske færdigheder. Efter kurset vil du
                                         være i stand til at skabe en god og spændende historie med masser af dynamik
                                     </p>
                                 </div>

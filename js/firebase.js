@@ -13,9 +13,6 @@ function deleteCourse(course) {
     const key = course.dataset.courseid
     classToggle(course, 'removed-course')
 
-    console.log(course);
-    // deleteFirestorage
-
     const docRef = courseRef.doc(key)
     docRef.get().then(function (doc) {
         if (doc.exists) {

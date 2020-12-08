@@ -7,9 +7,11 @@ const gridLabels = document.getElementById('gridLabels')
 courseRef.onSnapshot(function (snapshotData) {
     let courses = [];
     snapshotData.forEach(function (doc) {
-      let course = doc.data();
-      course.id = doc.id;
-      courses.push(course);
+        let course = doc.data();
+        course.id = doc.id;
+        courses.push(course);
+        addDataPoint(myChart, courses)
+        appendCourses(course);
     });
 
     if (courses.length >= 0) {
@@ -19,39 +21,32 @@ courseRef.onSnapshot(function (snapshotData) {
         fdb.style.display = 'block'
         gridLabels.style.display = 'none'
     }
-    // console.log(courses);
-    addDataPoint(myChart, courses)
-    appendCourses(courses);
+
+    
     removeBtnEventHandler()
   });
 
 
 /**
  * Renders course elements to page
- * @param  {Array} Courses An array of the coures to be rendered
+ * @param  {Object} Courses An object of the course to be rendered
  * @return {Null}
- * @credit cederdorff - GITHUB - https://github.com/cederdorff/mdu-e19front/blob/master/firebase-user-crud/js/main.js
  */
-function appendCourses(courses) {
-    let htmlTemplate = "";
-    for (let {id, title, sold, views, likes} of courses) {
-      htmlTemplate += `
-      <div class="page__course" data-courseid="${id}">
-                        <p class="course__title">${title}</p>
-                        <p class="course__sales">${sold}</p>
-                        <p class="course__views">${views}</p>
-                        <p class="course__likes">${likes}</p>
-                        <div class="button-actions">
-                            <button class="btn btn-edit">Rediger</button>
-                            <button class="btn btn-delete" title="Slet kursus">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-      `;
-    }
+function appendCourses({id, title, sold, views, likes}) {
+        const html = `<div class="page__course" data-courseid="${id}">
+            <p class="course__title">${title}</p>
+            <p class="course__sales">${sold}</p>
+            <p class="course__views">${views}</p>
+            <p class="course__likes">${likes}</p>
+            <div class="button-actions">
+                <button class="btn btn-edit">Rediger</button>
+                <button class="btn btn-delete" title="Slet kursus">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>`
+      _coursesList.insertAdjacentHTML('beforebegin', html)
 
-    _coursesList.innerHTML = htmlTemplate;
   }
 
   function removeBtnEventHandler() {
@@ -62,8 +57,6 @@ function appendCourses(courses) {
           })
       })
   }
-
-
 
   
   /**

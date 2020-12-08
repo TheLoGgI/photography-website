@@ -42,9 +42,9 @@ padding: 0 1rem 0 0;
 }
 
 .episode-titel{
-  display: inline;
-  font-weight: 500;
-  margin: 0 auto 0 1rem;
+font-weight: 500;
+margin: 0 1rem 0 1rem
+
 }
 
 .episode-progress {

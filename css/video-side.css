@@ -69,8 +69,7 @@ progress::-webkit-progress-value {
 position: absolute;
 left:0;
 width: 100%;
-}
-.destription-section{
+}.destription-section{
   display: flex;
 margin: 15rem 0 0 0;
 }
@@ -78,13 +77,19 @@ margin: 15rem 0 0 0;
 .info-element{
 width: 60%;
 margin: 0 2rem 0 0
+
 }
 
 .stats-section{
-width:30%;
-margin: 0rem;
-background-color: gray
+width:40%;
+height:50%;
+border-radius: 5px;
+padding: 2rem;
+background-color: white;
+}
 
+.like-button {
+margin: 0 1rem 0 0
 }
 .kurser-overskrift {
   margin: 0rem 0 2rem 0
@@ -98,17 +103,52 @@ margin: 0 0 0 2rem;
 
 .hero__btn {
   display: inline-block;
+  text-align: center;
   font-size: var(--fnt-size20);
   padding: 1em 1.5em;
   font-weight: bold;
   background-color: var(--clr-main);
   color: white;
   text-decoration: none;
+  width: 100%;
 }
+
+.pris-section{
+display: flex;
+justify-content: space-between;
+align-items:center;
+padding: 0 1rem
+}
+
+.pris-section h2 {
+font-size: var(--fnt-size45)
+
+}
+.pris-section p {
+  font-size: var(--fnt-size20)
+  
+  }
+
 
 .stats-element{
 display: flex;
 flex-wrap: wrap;
-
+justify-content: space-evenly;
+padding: 0 3rem;
 }
 
+.stats-element p{
+ font-size: 0.8rem;
+  }
+
+.stat{
+  margin: 2rem;
+  text-align: center
+}
+.stat-img{
+width: 35px
+}
+.stat-header{
+font-size: ;
+
+}

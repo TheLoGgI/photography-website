@@ -2,7 +2,11 @@
     padding: 0 4rem;
 }
 
-.all-courses-container {}
+.kurser-heading {
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 /* Styling af hvert kursus i liste */
 
@@ -20,13 +24,16 @@
 
 .all-courses-image-container {
     height: 200px;
-    width: 360px;
+    width: 430px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .all-courses-image {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
     display: block;
-    border-radius: 10px;
 }
 
 .all-courses-text-container {

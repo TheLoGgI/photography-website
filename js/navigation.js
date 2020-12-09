@@ -31,7 +31,6 @@ function moveSelection(navElement) {
 
     selection.style.transform = `translateX(${selectedRect.x + 5 + 'px'})`
     selection.style.transition = 'transform .3s ease'
-    
 }
 
 
@@ -89,12 +88,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // Gives time for Font Awesome icons to load in
     setTimeout( () => {
         moveSelection(navElement)
-    }, 300)
+    }, 800)
 
-    // const panelSideMenu = document.getElementById('panel-sidemenu')
-    // if (panelSideMenu) {
-    //     navgationSelectionHandler(panelSideMenu, 'picked', sidePanel)
-    // }
     window.addEventListener('resize', () => moveSelection(navElement))
 })
 

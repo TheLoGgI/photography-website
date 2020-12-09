@@ -18,6 +18,24 @@
 }
 
 
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/poopins-Regular.woff) format("woff"),
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+  }
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/poopins-Bold.woff) format("woff"),
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+  }
+
+
 * {
     margin: 0; 
     padding: 0;

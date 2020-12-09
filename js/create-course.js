@@ -53,12 +53,17 @@ _couseForm.addEventListener('submit', e => {
     let totalDuration = 0
 
     for (const lesson of lessons) {
-        isAllFilesResolved.push(toFilePath(lesson, 'video'))
+        const lessonTime = toFilePath(lesson, 'video')
+        lessonTime.then(time => {
+            lesson.time = time
+        })
+        isAllFilesResolved.push(lessonTime)
     }
 
     console.log(isAllFilesResolved);
     
     Promise.all(isAllFilesResolved).then(videos => {
+        console.log(videos);
         totalDuration = videos.reduce((accumulator, duration) => accumulator + duration)
 
         // remove loading
@@ -114,7 +119,7 @@ function addLektion() {
             <input type="text" class="input-field" name="${'videotitle'+_lessonCounter}" id="courselektion1" required>
             <div class="course__videoupload">
                 <label for="${'videofil'+_lessonCounter}" class="btn btn-upload">Upload</label>
-                <input type="file" class="input-image" name="${'lesson'+_lessonCounter}" id="${'videofil'+_lessonCounter}">
+                <input type="file" class="input-image" name="${'lesson'+_lessonCounter}" id="${'videofil'+_lessonCounter}" required>
                 <i class="fas fa-times"></i>
             </div>
         </div>

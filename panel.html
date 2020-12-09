@@ -25,8 +25,8 @@
             <div id="menu" class="navgigation__menu">
                 <a href="/" class="navigation__links ">Forside</a>
                 <a href="/kurser.html" class="navigation__links">Kurser</a>
-                <a href="/bruger-side.html" class="navigation__links navigation__login selected">Bruger</a>
-                <a href="/panel.html" class="navigation__links navigation__login">admin</a>
+                <a href="/bruger-side.html" class="navigation__links navigation__login">Bruger</a>
+                <a href="/panel.html#adminstration" class="navigation__links navigation__login selected">admin</a>
             </div>
             <i tabindex="0" class="fas fa-shopping-cart"></i>
         </nav>
@@ -63,7 +63,7 @@
 
                         <div class="input-col">
                             <label for="coursetitle">Kursus titel</label>
-                            <input type="text" class="input-field" name="title" id="coursetitle">
+                            <input type="text" class="input-field" name="title" id="coursetitle" required>
                         </div>
                         <div class="input-col">
                             <label for="coursedescription">Kursus beskrivelse</label>
@@ -80,23 +80,22 @@
                         </div>
                         <div class="input-col">
                             <label for="courseprice">Kursus pris Kr.</label>
-                            <input type="number" class="input-field" name="price" id="courseprice">
+                            <input type="number" class="input-field" name="price" id="courseprice" required>
                         </div>
                         <div class="image-upload">
                             <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload
-                                Cover
-                                Billede</label>
-                            <input type="file" class="input-image" name="image" id="courseimage">
+                                Cover Billede</label>
+                            <input type="file" class="input-image" name="image" id="courseimage" required>
                         </div>
                     </div>
 
                     <div class="grid-col">
                         <div class="input-col">
                             <label for="coursetitle">Introduktions video title</label>
-                            <input type="text" class="input-field" name="introtitle" id="coursetitle">
+                            <input type="text" class="input-field" name="introtitle" id="coursetitle" required>
                             <div class="course__videoupload">
                                 <label for="courseintro" class="btn btn-upload">Upload</label>
-                                <input type="file" class="input-image" name="introvideo" id="courseintro">
+                                <input type="file" class="input-image" name="introvideo" id="courseintro" required>
                                 <i class="fas fa-times"></i>
                             </div>
                         </div>
@@ -106,10 +105,10 @@
                                 <em class="course__index">1.</em>
                                 <div class="course__video-module">
                                     <label for="courselektion1">Lektions navn</label>
-                                    <input type="text" class="input-field" name="videotitle1" id="courselektion1">
+                                    <input type="text" class="input-field" name="videotitle1" id="courselektion1" required>
                                     <div class="course__videoupload">
                                         <label for="videofile1" class="btn btn-upload">Upload</label>
-                                        <input type="file" class="input-image" name="lesson1" id="videofile1">
+                                        <input type="file" class="input-image" name="lesson1" id="videofile1" required>
                                         <i class="fas fa-times"></i>
                                     </div>
                                 </div>

@@ -21,20 +21,23 @@
         <img class="header__trademark" src="/images/Logo.svg" alt="Puk Damgaard Trademark">
         <nav class="navigation">
             <div id="menu" class="navgigation__menu">
-                <a href="index.html" class="navigation__links selected">Forside</a>
-                <a href="kurser.html" class="navigation__links">Kurser</a>
+                <a href="/" class="navigation__links ">Forside</a>
+                <a href="/kurser.html" class="navigation__links selected">Kurser</a>
+                <a href="/bruger-side.html" class="navigation__links navigation__login">Bruger</a>
+                <a href="/panel.html#adminstration" class="navigation__links navigation__login">admin</a>
             </div>
-            <a href="#" class="navigation__links navigation__login">login</a>
+            <!-- <a href="#" class="navigation__links navigation__login">login</a> -->
             <i tabindex="0" class="fas fa-shopping-cart"></i>
         </nav>
         <div id="navSelection" class="selection"></div>
     </header>
     <main id="main-curses">
-        <h1 class="kurser-heading">Kurser</h1>
-        <section id="all-courses-container">
-            <div id="all-courses-placement"></div>
-        </section>
+            <h1 class="kurser-heading">Kurser</h1>
+            <section id="all-courses-container">
+                <div id="all-courses-placement"></div>
+            </section>
     </main>
+    
     <footer>
         <section class="flexbox-footer">
             <div class="footer-text">
@@ -71,14 +74,13 @@
             <!-- </div> -->
         </section>
     </footer>
-    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+    <script type="text/javascript" src="js/navigation.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
     <script src="js/fireInit.js"></script>
     <script src="js/firestorage.js"></script>
     <script src="js/alle-kurser.js"></script>
-    <script type="text/javascript" src="js/navigation.js"></script>
 </body>
 
 </html>

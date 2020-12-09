@@ -2,15 +2,17 @@
 courseRef.onSnapshot(function (snapshotData) {
     snapshotData.forEach(function (doc) {
         let course = doc.data();
+        course.id = doc.id;
+        console.log(course);
         appendCourse(course);
     });
 });
 
-async function appendCourse({ description, difficulty, duration, title, image, lessons, price }) {
+async function appendCourse({ description, difficulty, duration, title, image, lessons, price, id }) {
     const htmlTemplate = `
             <div class="all-courses-line-seperator">
                 <div class="all-courses-element">
-                    <a class="all-courses-image-container" href="video-side.html">
+                    <a class="all-courses-image-container" href="video-side.html?param=${id}">
                         <img class="all-courses-image" src="${await downloadFirestorage(image)}" alt="kursus-billede">
                     </a>
                     <div class="all-courses-split">
@@ -20,7 +22,7 @@ async function appendCourse({ description, difficulty, duration, title, image, l
                                 <div class="all-courses-description-container">
                                     <p class="all-courses-description">${description}</p>
                                 </div>
-                                <a class="all-courses-read-more" href="video-side.html">Læs mere</a>
+                                <a class="all-courses-read-more" href="video-side.html?param=${id}">Læs mere</a>
                             </div>
                             <div class="all-courses-text-button">
                                 <p>${durationCalculator(duration)} • ${lessons.length} lektioner • ${difficulty}</p>

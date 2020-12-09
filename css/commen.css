@@ -97,7 +97,8 @@ p {font-size: 1rem}
 h2{font-size: 2rem}
 
 .wrapper{
-margin: auto;
+    margin: 4rem auto;
     padding: 0 4rem;
     max-width: 1520px;
+    
 }

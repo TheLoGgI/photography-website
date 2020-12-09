@@ -14,10 +14,9 @@
     --fnt-size25: 1.5625rem;
     --fnt-size35: 2.1875rem;
     --fnt-size45: 2.8125rem;
-    font-size: 1rem; /* 18px as normal font-size */
+    font-size: 1rem;
+    /* 18px as normal font-size */
 }
-
-
 
 @font-face {
     font-family: poppins;
@@ -37,21 +36,25 @@
 
 
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--ff-body);
 }
 
-p {font-size: 1rem}
+p {
+    font-size: 1rem
+}
 
-h2{font-size: 2rem}
+h2 {
+    font-size: 2rem
+}
 
-.wrapper{
-margin: auto;
+.wrapper {
+    margin: auto;
     padding: 0 4rem;
     max-width: 1520px;
 }

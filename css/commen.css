@@ -20,21 +20,17 @@
 
 
 @font-face {
-    font-family: poppins;
-    src: url(../fonts/poppins-Regular.woff) format("woff"),
-    url(../fonts/poppins-Regular.tff) format("ttf"),
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.tff);
     font-weight: 400;
     font-style: normal;
-    font-display: swap
   }
-
+  
 @font-face {
-    font-family: poppins;
-    src: url(../fonts/poppins-Bold.woff) format("woff"),
-    url(../fonts/poppins-Bold.ttf) format("ttf"),
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Bold.tff);
     font-weight: 700;
     font-style: normal;
-    font-display: swap
   }
 
 

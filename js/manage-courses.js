@@ -77,3 +77,9 @@ function appendCourses({id, title, sold, views, likes}) {
     } 
     return null
 }
+
+  
+let spaService = new SpaService("adminstration");
+window.pageChange = function() {
+spaService.pageChange();
+}

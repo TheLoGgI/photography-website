@@ -2,7 +2,7 @@
 
 .header {
     padding: .8rem 4rem;
-    background-color: ##F5F5FB;
+    background-color: #F5F5FB;
     width: 100%;
     height: 100px;
     display: flex;
@@ -10,8 +10,10 @@
 }
 
 .header__trademark {
-    max-width: 12rem;
     margin-right: auto;
+}
+.header__logo {
+    max-width: 12rem;
 }
 
 .navigation>*, .navgigation__menu>a {

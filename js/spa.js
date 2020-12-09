@@ -39,7 +39,7 @@ class SpaService {
 
   // navigate to a new view/page by changing href
   navigateTo(pageId) {
-    window.location.href = `#${pageId}`;
+    window.location.href = `#${pageId}`;½
   }
 
   // set default page or given page by the hash url
@@ -60,9 +60,4 @@ class SpaService {
     selection.style.transition = 'transform .3s ease, width .4s ease'
     
 }
-}
-  
-  let spaService = new SpaService("adminstration");
-  window.pageChange = function() {
-  spaService.pageChange();
 }

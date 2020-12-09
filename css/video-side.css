@@ -1,3 +1,8 @@
+body{
+
+  background-color: #F4F4F4;
+}
+
 .video-section{
 display: flex;
 justify-content: flex-start ;
@@ -79,7 +84,7 @@ margin: 15rem 0 0 0;
 
 .info-element{
 width: 60%;
-margin: 0 2rem 0 0
+margin: 0 2rem 2rem 0
 
 }
 
@@ -95,16 +100,15 @@ background-color: white;
 margin: 0 1rem 0 0
 }
 .kurser-overskrift {
-  margin: 0rem 0 2rem 0
+margin: 0rem 0 2rem 0
 }
 
 .info-points{
-margin: 0 0 0 2rem;
+margin: 0 0 0 1rem;
 }
 
-#point-dot{margin: 1rem}
 
-.hero__btn {
+.video_btn {
   display: inline-block;
   text-align: center;
   font-size: var(--fnt-size20);
@@ -150,7 +154,4 @@ padding: 0 3rem;
 }
 .stat-img{
 width: 35px
-}
-.stat-header{
-
 }

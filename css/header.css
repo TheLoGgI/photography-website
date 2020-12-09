@@ -47,5 +47,10 @@
     top: 70px;
     border-radius: 2px;
     user-select: none;
+<<<<<<< HEAD
     transform: translateX(2000px);
 }
+=======
+    transform: translateX(500px);
+}
+>>>>>>> 6da676d0c6ce7a3ed3318feaed9420107e530e44

@@ -294,12 +294,14 @@
 
 .footer-text p{
     margin: 20px;
+    color: black;
 }
 
 .fa-facebook-square, .fa-instagram-square, .fa-linkedin {
     margin: 0 10px 0 0;
     font-size: 30px;
     vertical-align: middle;
+    color: black;
 }
 
 .buttom-footer {

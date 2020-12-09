@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: poppins;
-    src: url(../fonts/poppins-Regular.woff) format("woff"),
+    src: url(../fonts/Poppins-Regular.woff) format("woff"),
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: poppins;
-    src: url(../fonts/poppins-Bold.woff) format("woff"),
+    src: url(../fonts/Poppins-Bold.woff) format("woff"),
     font-weight: 700;
     font-style: normal;
     font-display: swap

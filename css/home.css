@@ -179,8 +179,8 @@
 .flexbox-fotografen {
     display: flex;
     background-color: #F2F2F2;
-    margin: 50px;
-    margin-bottom: 100px;
+    margin: 50px auto 15rem auto;
+    max-width: 1200px;
 }
 
 .fotografen-text {

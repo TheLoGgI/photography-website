@@ -1,17 +1,23 @@
 
         function uploadFirestorage(file, filename) {
 
+            console.log(file, filename);
             // Create storage ref
             let storageRef = firebase.storage().ref('lessons/' + filename)
        
             // Upload file
             let task = storageRef.put(file)
 
+
             // Update progress
             task.on('state_changed',
 
+                function progress(snapshot) {
+                    // let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                    // console.log(percentage);
+                },
                 function error(err) {
-                    console.error(err);
+                    console.error(err, file, filename);
                 },
 
                 function complete() {
@@ -21,6 +27,9 @@
             )
 
             return new Promise((resolve, reject) => {
+                if (filename.includes('image')) {
+                    resolve('Succes')
+                }
                 const video = document.createElement('video')
 
                 try {

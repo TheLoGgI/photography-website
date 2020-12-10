@@ -14,25 +14,25 @@ _addCourse.addEventListener('click', e => {addLektion()})
 _couseForm.addEventListener('submit', e => {
     e.preventDefault()
     document.getElementById('loading').style.display = 'flex'
+    
     // Creates FormData object in an array-like structure
     const formData = new FormData(_couseForm)
-
     // Converts the formdata to an object
-    const formObject = Object.fromEntries(Array.from(formData));
-
-
+    const formObject = Object.fromEntries(formData);    
+    console.log(formObject);
     toFilePath(formObject, 'image')
     toFilePath(formObject, 'introvideo')
-
+    
     // Declare lessons array for later use
     const lessons = []
+    
 
     // Sort object for lesson title and video
     for (const prop in formObject) {
         const index = prop.charAt(prop.length-1)
 
         if (prop.includes('videotitle')) {
-            lessons[index] = {
+            lessons[index - 1] = {
                 index,
                 key: randomKey(),
                 "title": formObject[prop]
@@ -40,23 +40,24 @@ _couseForm.addEventListener('submit', e => {
             delete formObject[prop] // videotitle property on the object 
 
         } else if (prop.includes('lesson')) {
-            lessons[index].video = formObject[prop]
+            lessons[index - 1].video = formObject[prop]
             delete formObject[prop] // lesson property on the object 
         }
     }
 
-    // Cleans object
-    lessons.shift()
-    
-    
+    console.log(formObject);
+
+
     const isAllFilesResolved = []
     let totalDuration = 0
 
     for (const lesson of lessons) {
         const lessonTime = toFilePath(lesson, 'video')
+        console.log(lessonTime);
         lessonTime.then(time => {
             lesson.time = time
         })
+
         isAllFilesResolved.push(lessonTime)
     }
 
@@ -80,7 +81,7 @@ _couseForm.addEventListener('submit', e => {
 
         console.log(formObject);
 
-        createCourse(formObject)
+        // createCourse(formObject)
 
         _couseForm.reset()
     })
@@ -127,7 +128,7 @@ function addLektion() {
 
     _lektionsList.insertAdjacentHTML( 'beforeend',html)
     
-    inputFileChangeHandler()
+    // inputFileChangeHandler()
 }
 
 
@@ -138,9 +139,12 @@ function addLektion() {
  * @return {Promise}  Returns promise of successfully uploaded mediafile
  */
 function toFilePath(formdata, prop) {
-    let promis
+    let promis = null
     if (formdata[prop].size !== 0) {
-        const name = formdata.title.replaceAll(' ', '§').toLowerCase() + `?${prop.toLowerCase()}${formdata.key ? '-' + formdata.key : ''}`
+        const name = formdata.title
+        .replaceAll(' ', '§').toLowerCase() + 
+        `?${prop.toLowerCase()}${formdata.key ? '-' + formdata.key : ''}`
+
         promis = uploadFirestorage(
             formdata[prop], 
             name
@@ -159,14 +163,14 @@ function toFilePath(formdata, prop) {
  * Handles change event on the file inputs
  * @return {null} 
  */
-function inputFileChangeHandler() {
-    const fileinputs = document.querySelectorAll('input[type="file"]')
+// function inputFileChangeHandler() {
+//     const fileinputs = document.querySelectorAll('input[type="file"]')
     
-    fileinputs.forEach(input => {
-        input.addEventListener('change', fileTypeCheck)
-    })
+//     fileinputs.forEach(input => {
+//         input.addEventListener('change', fileTypeCheck)
+//     })
     
-}
+// }
 
 
 /**
@@ -183,9 +187,10 @@ function fileTypeCheck(e) {
     if (element.name !== 'image') {
         requiredFileType = ['video/mp4']
     } else {
-        requiredFileType = ['image/png', 'image/jpg', 'image/gif', 'image/jpeg']
+        requiredFileType = ['image/jpeg','image/png', 'image/jpg', 'image/gif']
     }
      
+    // Virker ikke helt
     for (const requiredType of requiredFileType) {
         if (fileType !== requiredType) {
             // Error
@@ -195,6 +200,7 @@ function fileTypeCheck(e) {
             status = true
         }
     }
+    
     if (status) {
         element.style.borderBottom = '2px solid var(--clr-main)'
     } else {
@@ -203,7 +209,7 @@ function fileTypeCheck(e) {
 
 }
 
-inputFileChangeHandler()
+// inputFileChangeHandler()
 
 
 

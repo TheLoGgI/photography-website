@@ -3,9 +3,16 @@ body{
   background-color: #F4F4F4;
 }
 
+p {
+
+font-size: var( --fnt-size16)
+
+}
+
 
 .video-section{
 display: flex;
+flex-wrap: wrap;
 justify-content: flex-start ;
 margin: 0 0 4rem 0 ;
 
@@ -101,7 +108,8 @@ background-color: white;
 margin: 0 1rem 0 0
 }
 .kurser-overskrift {
-margin: 0rem 0 2rem 0
+  font-size: var(--fnt-size35) ;
+margin: 0rem 0 2rem 0;
 }
 
 .info-points{

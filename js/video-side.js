@@ -59,18 +59,6 @@ async function generateCourse(course) {
         <div class="info-element">
             <h2 class="kurser-overskrift">Om dette kursus</h2>
             <p>${course.description}</p>
-                <p>Det som du får ud af det:<p>
-                <ul class="info-points">
-                    <li>Basisk kameratekniske færdigheder</li>
-                    <li>Istand til at skabe en god og spændene historie
-                    til dine kunder med masser af dynamik</li>
-                    <li>Blive klogere på kameraets funktioner</li>
-                    <li>Kreativ fotografering</li>
-                </ul>
-            
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-            ut labore et dolore magna aliquyam erat, sed diam voluptua.
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
         </div>
 
         <div class="stats-section">

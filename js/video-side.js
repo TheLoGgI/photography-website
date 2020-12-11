@@ -91,12 +91,12 @@ async function generateCourse(course) {
                     <p>Niveau</p>
                 </div>
                 <div class="stat">
-                    <h2 class="stat-header">${durationCalculator(course.duration)}</h2>
+                    <h2 class="stat-header">${Math.ceil(course.duration / 60)}</h2>
                     <p>Minutter</p>
                 </div>
                 <div class="stat">
                     <h2 class="stat-header">${course.lessons.length}</h2>
-                    <p>lektioner</p>
+                    <p>Lektioner</p>
                 </div>
                 <div class="stat">
                     <h2 class="stat-header">${course.likes}</h2>
@@ -114,13 +114,7 @@ async function generateCourse(course) {
 }
 
 function durationCalculator(seconds) {
-    let timeCalculated = Math.ceil(seconds / 60);
-    if (timeCalculated > 1) {
-        return timeCalculated + " minutter";
-    }
-    else {
-        return timeCalculated + " minut";
-    }
+    return Math.ceil(seconds / 60) + ' min';
 };
 
 function videoChangeHandler(course) {

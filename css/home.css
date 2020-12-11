@@ -74,13 +74,18 @@
 
 .flexbox-kurser {
     display: flex;
-    justify-content: space-between;
-    margin: 0px 100px 0px 100px;
+    justify-content: center;
+    margin: 0px auto;
+}
 
+.flexbox-kursus {
+    margin: 0 3rem;
 }
 
 .kurser-overskrift {
-    margin: 100px 0px 30px 100px;
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+    /* margin: 100px 0px 30px 100px; */
 }
 
 .kursus__img {
@@ -114,18 +119,36 @@
 
 .nyhedsbreve {
     background-color: #68BAA6;
-}
-
-.flexbox-nyhedsbreve {
+    padding: 5rem 0 7rem 0;
     display: flex;
-    justify-content: space-around;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-#nyhedsbreve-input {
-    height: 50px;
-    width: 300px;
+.nyhedsbreve-paragrath {
+    max-width: 348px;
+    font-size: .925rem;
+    margin: .5rem auto;
+    text-align: left;
+    display: block;
+}
+
+
+.news-input {
+    height: 44px;
+    max-width: 600px;
+    margin: 4rem auto 2rem auto;
+}
+
+.nyhedsbreve-input {
+    height: 100%;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 auto;
+    border:none;
+    border-radius: 3px 0px 0px 3px;
+
 }
 
 .nyhedsbreve__btn {
@@ -134,7 +157,8 @@
     background-color: var(--clr-main);
     font-weight: bold;
     color: white;
-    text-decoration: none;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
 }
 
 .kategorier-h1 {
@@ -147,6 +171,7 @@
     width: 300px;
     height: 230px;
     overflow: hidden;
+    margin-top: 1rem;
 }
 
 .flexbox-kategorier {
@@ -225,7 +250,7 @@
     padding: 10px;
     margin-top: -22px;
     color: white;
-    background-color: black;
+    background-color: var(--clr-main);
     font-weight: bold;
     font-size: 30px;
     transition: 0.6s ease;

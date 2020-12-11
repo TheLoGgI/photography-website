@@ -16,7 +16,7 @@ margin: 0 0 4rem 0 ;
 }
 .playlist{
 width: 40%;
-height: 100%;
+height: 600px;
 overflow: auto;
 
 }
@@ -37,20 +37,21 @@ padding: 0 0 0 1rem
 }
 
 .flex-episode{
-display: flex;
-align-items: baseline;
-margin: 0 0 0.3rem 0;
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 0.3rem 0;
 }
 
 .episode-timer{
-margin: 0 0 0 auto;
-padding: 0 1rem 0 0;
+  margin: 0 0 0 auto;
+  padding: 0 1rem 0 0;
 }
 
 .episode-titel{
   display: inline;
   font-weight: 500;
   margin: 0 auto 0 1rem;
+  max-width: 385px;
 }
 
 .episode-progress {
@@ -80,7 +81,7 @@ width: 100%;
 
 .destription-section{
   display: flex;
-margin: 15rem 0 0 0;
+  margin: 15rem 0 0 0;
 }
 
 .info-element{
@@ -155,4 +156,34 @@ padding: 0 3rem;
 }
 .stat-img{
 width: 35px
+}
+
+
+/*footer*/
+.flexbox-footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #68BAA6;
+  padding: 100px 0 80px 0;
+}
+
+.footer-text p{
+  margin: 20px;
+  color: black;
+}
+
+.fa-facebook-square, .fa-instagram-square, .fa-linkedin {
+  margin: 0 10px 0 0;
+  font-size: 30px;
+  vertical-align: middle;
+  color: black;
+}
+
+.buttom-footer {
+  background-color: #40786A;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }

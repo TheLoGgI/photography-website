@@ -45,8 +45,6 @@ _couseForm.addEventListener('submit', e => {
         }
     }
 
-    console.log(formObject);
-
 
     const isAllFilesResolved = []
     let totalDuration = 0
@@ -61,10 +59,8 @@ _couseForm.addEventListener('submit', e => {
         isAllFilesResolved.push(lessonTime)
     }
 
-    console.log(isAllFilesResolved);
     
     Promise.all(isAllFilesResolved).then(videos => {
-        console.log(videos);
         totalDuration = videos.reduce((accumulator, duration) => accumulator + duration)
 
         // remove loading
@@ -81,7 +77,7 @@ _couseForm.addEventListener('submit', e => {
 
         console.log(formObject);
 
-        // createCourse(formObject)
+        createCourse(formObject)
 
         _couseForm.reset()
     })
@@ -126,9 +122,9 @@ function addLektion() {
         </div>
     </div>`
 
-    _lektionsList.insertAdjacentHTML( 'beforeend',html)
+    _lektionsList.insertAdjacentHTML('beforeend',html)
     
-    // inputFileChangeHandler()
+    inputFileChangeHandler()
 }
 
 
@@ -163,14 +159,14 @@ function toFilePath(formdata, prop) {
  * Handles change event on the file inputs
  * @return {null} 
  */
-// function inputFileChangeHandler() {
-//     const fileinputs = document.querySelectorAll('input[type="file"]')
+function inputFileChangeHandler() {
+    const fileinputs = document.querySelectorAll('input[type="file"]')
     
-//     fileinputs.forEach(input => {
-//         input.addEventListener('change', fileTypeCheck)
-//     })
+    fileinputs.forEach(input => {
+        input.addEventListener('change', fileTypeCheck)
+    })
     
-// }
+}
 
 
 /**
@@ -181,7 +177,6 @@ function toFilePath(formdata, prop) {
 function fileTypeCheck(e) {
     const element = e.currentTarget
     const fileType = element.files[0].type
-    let status = false
 
     let requiredFileType = []
     if (element.name !== 'image') {
@@ -189,19 +184,8 @@ function fileTypeCheck(e) {
     } else {
         requiredFileType = ['image/jpeg','image/png', 'image/jpg', 'image/gif']
     }
-     
-    // Virker ikke helt
-    for (const requiredType of requiredFileType) {
-        if (fileType !== requiredType) {
-            // Error
-            console.error('Wrong file type', element, 'required: ' + requiredFileType.toString());
-            status = false
-        } else {
-            status = true
-        }
-    }
     
-    if (status) {
+    if (requiredFileType.includes(fileType)) {
         element.style.borderBottom = '2px solid var(--clr-main)'
     } else {
         element.style.borderBottom = '2px solid var(--clr-error)'
@@ -209,7 +193,7 @@ function fileTypeCheck(e) {
 
 }
 
-// inputFileChangeHandler()
+inputFileChangeHandler()
 
 
 

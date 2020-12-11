@@ -39,94 +39,94 @@
             <a href="#analyse" class="sidenav__item">Analyse</a>
             <div id="sidePanelMenu" class="sidePanelMenu"></div>
         </aside>
-        <div class="grid-views">
-            <section id="adminstration" class="page">
-                <h1>Kurser</h1>
-                <p id="missingCourses"> Du har ingen uploadet kurser</p>
-                <div id="gridLabels" class="grid-lables">
-                    <p>Title</p>
-                    <p>Solgt</p>
-                    <p>Visninger</p>
-                    <p>Syntes om</p>
+    <div class="grid-views">
+    <section id="adminstration" class="page">
+        <h1>Kurser</h1>
+        <p id="missingCourses"> Du har ingen uploadet kurser</p>
+        <div id="gridLabels" class="grid-lables">
+            <p>Title</p>
+            <p>Solgt</p>
+            <p>Visninger</p>
+            <p>Syntes om</p>
+        </div>
+        <div id="courses" class="courses"></div>
+    </section>
+
+    <section id="upload" class="page">
+        <h1>Opret Kursus</h1>
+        <form id="createCourse" class="create-course-grid">
+            <div id="loading" class="loading-screen">
+                <i class="fas fa-spinner"></i>
+                <p>Vent mens vi uploader dine filer..</p>
+            </div>
+            <div class="grid-col">
+
+                <div class="input-col">
+                    <label for="coursetitle">Kursus titel</label>
+                    <input type="text" class="input-field" name="title" id="coursetitle" required>
                 </div>
-                <div id="courses" class="courses"></div>
-            </section>
+                <div class="input-col">
+                    <label for="coursedescription">Kursus beskrivelse</label>
+                    <textarea cols="32" rows="8" class="input-field" name="description"
+                        id="coursedescription"></textarea>
+                </div>
+                <div class="input-col">
+                    <label for="coursedifficulty">Kursus niveau</label>
+                    <select class="input-field" name="difficulty" id="coursedifficulty">
+                        <option value="begynder">Begynder</option>
+                        <option value="erfaren">Erfaren</option>
+                        <option value="avanceret">Avanceret</option>
+                    </select>
+                </div>
+                <div class="input-col">
+                    <label for="courseprice">Kursus pris Kr.</label>
+                    <input type="number" class="input-field" name="price" id="courseprice" required>
+                </div>
+                <div class="image-upload">
+                    <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload
+                        Cover Billede</label>
+                    <input type="file" class="input-image" name="image" id="courseimage" required>
+                </div>
+            </div>
 
-            <section id="upload" class="page">
-                <h1>Opret Kursus</h1>
-                <form id="createCourse" class="create-course-grid">
-                    <div id="loading" class="loading-screen">
-                        <i class="fas fa-spinner"></i>
-                        <p>Vent mens vi uploader dine filer..</p>
+            <div class="grid-col">
+                <div class="input-col">
+                    <label for="coursetitle">Introduktions video title</label>
+                    <input type="text" class="input-field" name="introtitle" id="coursetitle" required>
+                    <div class="course__videoupload">
+                        <label for="courseintro" class="btn btn-upload">Upload</label>
+                        <input type="file" class="input-image" name="introvideo" id="courseintro" required>
+                        <i class="fas fa-times"></i>
                     </div>
-                    <div class="grid-col">
+                </div>
 
-                        <div class="input-col">
-                            <label for="coursetitle">Kursus titel</label>
-                            <input type="text" class="input-field" name="title" id="coursetitle" required>
-                        </div>
-                        <div class="input-col">
-                            <label for="coursedescription">Kursus beskrivelse</label>
-                            <textarea cols="32" rows="8" class="input-field" name="description"
-                                id="coursedescription"></textarea>
-                        </div>
-                        <div class="input-col">
-                            <label for="coursedifficulty">Kursus niveau</label>
-                            <select class="input-field" name="difficulty" id="coursedifficulty">
-                                <option value="begynder">Begynder</option>
-                                <option value="erfaren">Erfaren</option>
-                                <option value="avanceret">Avanceret</option>
-                            </select>
-                        </div>
-                        <div class="input-col">
-                            <label for="courseprice">Kursus pris Kr.</label>
-                            <input type="number" class="input-field" name="price" id="courseprice" required>
-                        </div>
-                        <div class="image-upload">
-                            <label for="courseimage" class="btn btn-upload"><i class="far fa-file-image"></i> Upload
-                                Cover Billede</label>
-                            <input type="file" class="input-image" name="image" id="courseimage" required>
-                        </div>
-                    </div>
-
-                    <div class="grid-col">
-                        <div class="input-col">
-                            <label for="coursetitle">Introduktions video title</label>
-                            <input type="text" class="input-field" name="introtitle" id="coursetitle" required>
+                <div id="lektions" class="lections">
+                    <div class="course__modules">
+                        <em class="course__index">1.</em>
+                        <div class="course__video-module">
+                            <label for="courselektion1">Lektions navn</label>
+                            <input type="text" class="input-field" name="videotitle1" id="courselektion1" required>
                             <div class="course__videoupload">
-                                <label for="courseintro" class="btn btn-upload">Upload</label>
-                                <input type="file" class="input-image" name="introvideo" id="courseintro" required>
+                                <label for="videofile1" class="btn btn-upload">Upload</label>
+                                <input type="file" class="input-image" name="lesson1" id="videofile1" required>
                                 <i class="fas fa-times"></i>
                             </div>
                         </div>
-
-                        <div id="lektions" class="lections">
-                            <div class="course__modules">
-                                <em class="course__index">1.</em>
-                                <div class="course__video-module">
-                                    <label for="courselektion1">Lektions navn</label>
-                                    <input type="text" class="input-field" name="videotitle1" id="courselektion1" required>
-                                    <div class="course__videoupload">
-                                        <label for="videofile1" class="btn btn-upload">Upload</label>
-                                        <input type="file" class="input-image" name="lesson1" id="videofile1" required>
-                                        <i class="fas fa-times"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div id="addCourse" class="add-lektion">
-                            <button class="btn add-btn"><i class="fas fa-plus"></i></button>
-                            <span>Tilføj lektion</span>
-                        </div>
-
-
-                        <input type="submit" class="btn btn-submit" value="Opret Kursus">
                     </div>
-                </form>
-            </section>
+
+                </div>
+
+
+                <div id="addCourse" class="add-lektion">
+                    <button class="btn add-btn"><i class="fas fa-plus"></i></button>
+                    <span>Tilføj lektion</span>
+                </div>
+
+
+                <input type="submit" class="btn btn-submit" value="Opret Kursus">
+            </div>
+        </form>
+    </section>
 
             <section id="analyse" class="page">
                 <h1>Analyse</h1>

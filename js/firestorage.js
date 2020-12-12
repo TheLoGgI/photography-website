@@ -21,12 +21,7 @@ function uploadFirestorage(file, filename) {
         // Update progress
         task.on('state_changed',
 
-            function progress(snapshot) {
-                // if (snapshot.bytesTransferred === snapshot.totalBytes) {
-                //     console.log('Complet uploaded file from progress funktion');
-                // }
-
-            },
+            function progress(snapshot) {},
             function error(err) {
                 console.error(err, file, filename);
             },
@@ -58,7 +53,12 @@ function uploadFirestorage(file, filename) {
     })
 }
 
-// Delete stored videos
+
+/**
+ * Deletes stored videos
+ * @param  {String} path string of file location
+ * @return {null} 
+ */
 function deleteFirestorage(path) {
     //  Create a reference to the file to delete
     let storageRef = firebase.storage().ref('lessons/' + path)
@@ -73,6 +73,11 @@ function deleteFirestorage(path) {
     });
 }
 
+/**
+ * Downloads stored videos, from firebase
+ * @param  {String} path string of file location
+ * @return {null} 
+ */
 async function downloadFirestorage(path) {
     // Create a reference with an initial file path and name
     const storageRef = firebase.storage().ref('lessons/' + path)

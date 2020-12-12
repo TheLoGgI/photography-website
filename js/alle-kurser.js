@@ -8,6 +8,11 @@ courseRef.onSnapshot(function (snapshotData) {
     });
 });
 
+/**
+ * Generates the page content, from firebase data
+ * @param  {Object} course Object of course data
+ * @return {null}      
+ */
 async function appendCourse({ description, difficulty, duration, title, image, lessons, price, id }) {
     const htmlTemplate = `
             <div class="all-courses-line-seperator">
@@ -42,6 +47,12 @@ async function appendCourse({ description, difficulty, duration, title, image, l
     document.querySelector('#all-courses-placement').insertAdjacentHTML("beforebegin", htmlTemplate);
 }
 
+
+/**
+ * Calulates secounds to minutes
+ * @param  {Int} seconds Number of seconds
+ * @return {String} time in minuts + correct noun
+ */
 function durationCalculator(seconds) {
     let timeCalculated = Math.ceil(seconds / 60);
     if (timeCalculated > 1) {

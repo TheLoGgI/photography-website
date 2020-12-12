@@ -1,13 +1,23 @@
 
+/**
+ * Creates a document on firebase, with a random id
+ * @param  {Object} course Object of course data
+ * @return {null} 
+ */
 function createCourse(course) {
     courseRef.add(course).then(function (docRef) {
         console.log("Document successfully written!", docRef.id)
     })
-        .catch(function (error) {
-            console.error("Error writing document: ", error);
-        });
+    .catch(function (error) {
+        console.error("Error writing document: ", error);
+    });
 }
 
+/**
+ * Deletes firebase document for course and mediafiles
+ * @param  {Object} course Object of course data
+ * @return {null} 
+ */
 function deleteCourse(course) {
 
     const key = course.dataset.courseid
@@ -49,6 +59,7 @@ function deleteCourse(course) {
             console.error("Error removing document: ", error);
         });
 
+    // Waits for animation
     }, 550)
 }
 

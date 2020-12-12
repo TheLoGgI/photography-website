@@ -54,6 +54,10 @@ function appendCourses(courses) {
 
   }
 
+  /**
+ * Creates eventlistners for every delete button
+ * @return {null} 
+ */
   function removeBtnEventHandler() {
       const courses = document.querySelectorAll('.page__course .btn-delete')
       courses.forEach(element => {
